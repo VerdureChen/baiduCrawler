@@ -49,7 +49,7 @@ class SinanewsSpider(scrapy.Spider):
 
     # 更新的新闻数量
     new_news = 0
-
+    #good
     #已访问url
     visited_url = {}
 
