@@ -2111,3 +2111,524 @@
 2020/07/28 23:40:25 zhihuLogger tmp.py 【停电】【sub url】:https://www.zhihu.com/people/gui-bai-56, 【start url】:https://www.baidu.com/s?wd=%E5%81%9C%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=10
 2020/07/28 23:40:25 zhihuLogger tmp.py 【停电】【sub url】:https://zhuanlan.zhihu.com/p/29824708, 【start url】:https://www.baidu.com/s?wd=%E5%81%9C%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=10
 2020/07/28 23:40:25 zhihuLogger tmp.py 【停电】【sub url】:https://zhuanlan.zhihu.com/p/60528311, 【start url】:https://www.baidu.com/s?wd=%E5%81%9C%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=10
+2020/08/02 23:55:06 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-02----------------------------------------
+2020/08/02 23:55:06 zhihuLogger tmp.py 【电网】【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:55:06 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/20676144, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:55:16 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/275655239, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:55:29 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21543224, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:55:40 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/341318637, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:55:49 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/36694354, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:55:57 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21721370, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:56:11 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/topic/19583794, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:56:11 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/346297551/answer/842052597, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:56:19 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/topic/19600175/hot, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:56:19 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/24944988, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:58:17 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-02----------------------------------------
+2020/08/02 23:58:17 zhihuLogger tmp.py 【电网】【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:58:17 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/20676144, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:58:27 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/275655239, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:58:37 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/341318637, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:59:26 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21721370, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:59:26 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21543224/answer/152172562, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:59:26 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/topic/19598443, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:59:26 zhihuLogger tmp.py 【电网】【sub url】:https://daily.zhihu.com/story/9687262, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:59:26 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/346297551/answer/842052597, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:59:26 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/topic/19600175/hot, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/02 23:59:27 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/24944988, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:01:57 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-03----------------------------------------
+2020/08/03 00:01:57 zhihuLogger tmp.py 【电网】【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:01:57 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/20676144, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:02:08 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/275655239, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:02:18 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/341318637, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:02:27 zhihuLogger tmp.py 【new question】:在国家电网工作的日子是怎样的？, 【keyword】:电网, 【total answer number】:262
+2020/08/03 00:02:29 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21721370, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:02:38 zhihuLogger tmp.py 【new question】:国家电网到底有多强大？, 【keyword】:电网, 【total answer number】:2,709
+2020/08/03 00:02:40 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21543224/answer/152172562, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:02:48 zhihuLogger tmp.py 【new question】:要不要去国家电网？, 【keyword】:电网, 【total answer number】:417
+2020/08/03 00:02:52 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/topic/19598443, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:02:52 zhihuLogger tmp.py 【电网】【sub url】:https://daily.zhihu.com/story/9687262, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:02:52 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/346297551/answer/842052597, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:03:02 zhihuLogger tmp.py 【new question】:电网公司的待遇如何？, 【keyword】:电网, 【total answer number】:149
+2020/08/03 00:03:02 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/topic/19600175/hot, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:03:02 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/24944988, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/03 00:03:11 zhihuLogger tmp.py 【new question】:怎么才能进入国家电网？, 【keyword】:电网, 【total answer number】:91
+2020/08/03 00:03:13 zhihuLogger tmp.py 【new question】:国家电网算是很好的工作吗？, 【keyword】:电网, 【total answer number】:123
+2020/08/03 00:03:13 zhihuLogger tmp.py 【new question】:在南方电网工作的体验是怎样的？, 【keyword】:电网, 【total answer number】:42
+2020/08/03 00:03:14 zhihuLogger tmp.py 【question number】:275655239, 【page】:1, 【total_newQ】:7, 【total_upQ】:0, 【total_newA】:122, 【total_upA】:0
+2020/08/03 00:03:14 zhihuLogger tmp.py 【question number】:20676144, 【page】:1, 【total_newQ】:7, 【total_upQ】:0, 【total_newA】:123, 【total_upA】:0
+2020/08/03 00:03:14 zhihuLogger tmp.py 【question number】:341318637, 【page】:1, 【total_newQ】:7, 【total_upQ】:0, 【total_newA】:126, 【total_upA】:0
+2020/08/03 00:03:49 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:03:49 zhihuLogger tmp.py 【update question】:在国家电网工作的日子是怎样的？ 【keyword】:电网
+2020/08/03 00:03:49 zhihuLogger tmp.py 【question number】:21543224, 【page】:1, 【total_newQ】:7, 【total_upQ】:2, 【total_newA】:138, 【total_upA】:0
+2020/08/03 00:03:49 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:03:57 zhihuLogger tmp.py 【question number】:21721370, 【page】:1, 【total_newQ】:7, 【total_upQ】:3, 【total_newA】:143, 【total_upA】:0
+2020/08/03 00:04:06 zhihuLogger tmp.py 【question number】:346297551, 【page】:1, 【total_newQ】:7, 【total_upQ】:3, 【total_newA】:146, 【total_upA】:0
+2020/08/03 00:04:18 zhihuLogger tmp.py 【question number】:24944988, 【page】:1, 【total_newQ】:7, 【total_upQ】:3, 【total_newA】:151, 【total_upA】:0
+2020/08/03 00:04:18 zhihuLogger tmp.py 【update question】:怎么才能进入国家电网？ 【keyword】:电网
+2020/08/03 00:04:29 zhihuLogger tmp.py 【update question】:电网公司的待遇如何？ 【keyword】:电网
+2020/08/03 00:04:31 zhihuLogger tmp.py 【update question】:国家电网算是很好的工作吗？ 【keyword】:电网
+2020/08/03 00:04:31 zhihuLogger tmp.py 【update question】:在南方电网工作的体验是怎样的？ 【keyword】:电网
+2020/08/03 00:04:31 zhihuLogger tmp.py 【refineAnswer】:https://www.zhihu.com/question/275655239/answer/417932471
+2020/08/03 00:04:32 zhihuLogger tmp.py 【question number】:341318637, 【page】:2, 【total_newQ】:7, 【total_upQ】:7, 【total_newA】:255, 【total_upA】:0
+2020/08/03 00:04:40 zhihuLogger tmp.py 【question number】:275655239, 【page】:2, 【total_newQ】:7, 【total_upQ】:7, 【total_newA】:266, 【total_upA】:0
+2020/08/03 00:04:49 zhihuLogger tmp.py 【question number】:20676144, 【page】:2, 【total_newQ】:7, 【total_upQ】:7, 【total_newA】:274, 【total_upA】:0
+2020/08/03 00:05:02 zhihuLogger tmp.py 【question number】:21543224, 【page】:2, 【total_newQ】:7, 【total_upQ】:7, 【total_newA】:274, 【total_upA】:0
+2020/08/03 00:05:02 zhihuLogger tmp.py 【question number】:21721370, 【page】:2, 【total_newQ】:7, 【total_upQ】:7, 【total_newA】:275, 【total_upA】:0
+2020/08/03 00:05:02 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:05:23 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:05:25 zhihuLogger tmp.py 【question number】:346297551, 【page】:2, 【total_newQ】:7, 【total_upQ】:9, 【total_newA】:283, 【total_upA】:0
+2020/08/03 00:05:25 zhihuLogger tmp.py 【update question】:在国家电网工作的日子是怎样的？ 【keyword】:电网
+2020/08/03 00:05:25 zhihuLogger tmp.py 【update question】:电网公司的待遇如何？ 【keyword】:电网
+2020/08/03 00:05:26 zhihuLogger tmp.py 【question number】:24944988, 【page】:2, 【total_newQ】:7, 【total_upQ】:11, 【total_newA】:287, 【total_upA】:0
+2020/08/03 00:05:41 zhihuLogger tmp.py 【update question】:怎么才能进入国家电网？ 【keyword】:电网
+2020/08/03 00:05:45 zhihuLogger tmp.py 【update question】:在南方电网工作的体验是怎样的？ 【keyword】:电网
+2020/08/03 00:05:45 zhihuLogger tmp.py 【update question】:国家电网算是很好的工作吗？ 【keyword】:电网
+2020/08/03 00:05:45 zhihuLogger tmp.py 【question number】:24944988, 【page】:3, 【total_newQ】:7, 【total_upQ】:14, 【total_newA】:311, 【total_upA】:0
+2020/08/03 00:05:46 zhihuLogger tmp.py 【question number】:341318637, 【page】:3, 【total_newQ】:7, 【total_upQ】:14, 【total_newA】:383, 【total_upA】:0
+2020/08/03 00:05:54 zhihuLogger tmp.py 【question number】:275655239, 【page】:3, 【total_newQ】:7, 【total_upQ】:14, 【total_newA】:390, 【total_upA】:0
+2020/08/03 00:06:03 zhihuLogger tmp.py 【question number】:20676144, 【page】:3, 【total_newQ】:7, 【total_upQ】:14, 【total_newA】:395, 【total_upA】:0
+2020/08/03 00:06:03 zhihuLogger tmp.py 【question number】:21721370, 【page】:3, 【total_newQ】:7, 【total_upQ】:14, 【total_newA】:396, 【total_upA】:0
+2020/08/03 00:06:25 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:06:30 zhihuLogger tmp.py 【question number】:21543224, 【page】:3, 【total_newQ】:7, 【total_upQ】:15, 【total_newA】:400, 【total_upA】:0
+2020/08/03 00:06:30 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:06:39 zhihuLogger tmp.py 【update question】:在国家电网工作的日子是怎样的？ 【keyword】:电网
+2020/08/03 00:06:39 zhihuLogger tmp.py 【question number】:346297551, 【page】:3, 【total_newQ】:7, 【total_upQ】:17, 【total_newA】:412, 【total_upA】:0
+2020/08/03 00:06:48 zhihuLogger tmp.py 【update question】:怎么才能进入国家电网？ 【keyword】:电网
+2020/08/03 00:06:50 zhihuLogger tmp.py 【update question】:国家电网算是很好的工作吗？ 【keyword】:电网
+2020/08/03 00:06:51 zhihuLogger tmp.py 【question number】:341318637, 【page】:4, 【total_newQ】:7, 【total_upQ】:19, 【total_newA】:507, 【total_upA】:0
+2020/08/03 00:07:00 zhihuLogger tmp.py 【question number】:275655239, 【page】:4, 【total_newQ】:7, 【total_upQ】:19, 【total_newA】:513, 【total_upA】:0
+2020/08/03 00:07:00 zhihuLogger tmp.py 【question number】:21721370, 【page】:4, 【total_newQ】:7, 【total_upQ】:19, 【total_newA】:514, 【total_upA】:0
+2020/08/03 00:07:27 zhihuLogger tmp.py 【question number】:20676144, 【page】:4, 【total_newQ】:7, 【total_upQ】:19, 【total_newA】:518, 【total_upA】:0
+2020/08/03 00:07:27 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:07:27 zhihuLogger tmp.py 【update question】:电网公司的待遇如何？ 【keyword】:电网
+2020/08/03 00:07:36 zhihuLogger tmp.py 【question number】:21543224, 【page】:4, 【total_newQ】:7, 【total_upQ】:21, 【total_newA】:522, 【total_upA】:0
+2020/08/03 00:07:36 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:07:47 zhihuLogger tmp.py 【question number】:346297551, 【page】:4, 【total_newQ】:7, 【total_upQ】:22, 【total_newA】:530, 【total_upA】:0
+2020/08/03 00:07:47 zhihuLogger tmp.py 【update question】:在国家电网工作的日子是怎样的？ 【keyword】:电网
+2020/08/03 00:07:56 zhihuLogger tmp.py 【update question】:怎么才能进入国家电网？ 【keyword】:电网
+2020/08/03 00:07:58 zhihuLogger tmp.py 【update question】:国家电网算是很好的工作吗？ 【keyword】:电网
+2020/08/03 00:07:59 zhihuLogger tmp.py 【question number】:21543224, 【page】:5, 【total_newQ】:7, 【total_upQ】:25, 【total_newA】:606, 【total_upA】:0
+2020/08/03 00:07:59 zhihuLogger tmp.py 【question number】:341318637, 【page】:5, 【total_newQ】:7, 【total_upQ】:25, 【total_newA】:619, 【total_upA】:0
+2020/08/03 00:08:08 zhihuLogger tmp.py 【question number】:21721370, 【page】:5, 【total_newQ】:7, 【total_upQ】:25, 【total_newA】:625, 【total_upA】:0
+2020/08/03 00:08:16 zhihuLogger tmp.py 【question number】:275655239, 【page】:5, 【total_newQ】:7, 【total_upQ】:25, 【total_newA】:627, 【total_upA】:0
+2020/08/03 00:08:31 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:08:33 zhihuLogger tmp.py 【question number】:20676144, 【page】:5, 【total_newQ】:7, 【total_upQ】:26, 【total_newA】:634, 【total_upA】:0
+2020/08/03 00:08:33 zhihuLogger tmp.py 【update question】:电网公司的待遇如何？ 【keyword】:电网
+2020/08/03 00:08:33 zhihuLogger tmp.py 【question number】:346297551, 【page】:5, 【total_newQ】:7, 【total_upQ】:27, 【total_newA】:636, 【total_upA】:0
+2020/08/03 00:08:50 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:08:56 zhihuLogger tmp.py 【update question】:国家电网算是很好的工作吗？ 【keyword】:电网
+2020/08/03 00:08:57 zhihuLogger tmp.py 【update question】:在国家电网工作的日子是怎样的？ 【keyword】:电网
+2020/08/03 00:08:57 zhihuLogger tmp.py 【timeError】:https://www.zhihu.com/question/20676144/answer/91801453
+2020/08/03 00:08:57 zhihuLogger tmp.py 【refineAnswer】:https://www.zhihu.com/question/20676144/answer/91801453
+2020/08/03 00:08:57 zhihuLogger tmp.py 【commentError】https://www.zhihu.com/question/20676144/answer/91801453
+2020/08/03 00:08:57 zhihuLogger tmp.py 【question number】:341318637, 【page】:6, 【total_newQ】:7, 【total_upQ】:30, 【total_newA】:723, 【total_upA】:0
+2020/08/03 00:09:05 zhihuLogger tmp.py 【question number】:346297551, 【page】:6, 【total_newQ】:7, 【total_upQ】:30, 【total_newA】:729, 【total_upA】:0
+2020/08/03 00:09:13 zhihuLogger tmp.py 【question number】:275655239, 【page】:6, 【total_newQ】:7, 【total_upQ】:30, 【total_newA】:730, 【total_upA】:0
+2020/08/03 00:09:13 zhihuLogger tmp.py 【question number】:21721370, 【page】:6, 【total_newQ】:7, 【total_upQ】:30, 【total_newA】:730, 【total_upA】:0
+2020/08/03 00:09:33 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:09:38 zhihuLogger tmp.py 【update question】:电网公司的待遇如何？ 【keyword】:电网
+2020/08/03 00:09:38 zhihuLogger tmp.py 【question number】:20676144, 【page】:6, 【total_newQ】:7, 【total_upQ】:32, 【total_newA】:738, 【total_upA】:0
+2020/08/03 00:09:38 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:09:46 zhihuLogger tmp.py 【question number】:346297551, 【page】:7, 【total_newQ】:7, 【total_upQ】:33, 【total_newA】:748, 【total_upA】:0
+2020/08/03 00:09:50 zhihuLogger tmp.py 【question number】:341318637, 【page】:7, 【total_newQ】:7, 【total_upQ】:33, 【total_newA】:807, 【total_upA】:0
+2020/08/03 00:09:58 zhihuLogger tmp.py 【question number】:21721370, 【page】:7, 【total_newQ】:7, 【total_upQ】:33, 【total_newA】:812, 【total_upA】:0
+2020/08/03 00:10:06 zhihuLogger tmp.py 【question number】:275655239, 【page】:7, 【total_newQ】:7, 【total_upQ】:33, 【total_newA】:813, 【total_upA】:0
+2020/08/03 00:10:18 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:10:20 zhihuLogger tmp.py 【question number】:20676144, 【page】:7, 【total_newQ】:7, 【total_upQ】:34, 【total_newA】:819, 【total_upA】:0
+2020/08/03 00:10:31 zhihuLogger tmp.py 【update question】:在国家电网工作的日子是怎样的？ 【keyword】:电网
+2020/08/03 00:10:31 zhihuLogger tmp.py 【question number】:21721370, 【page】:8, 【total_newQ】:7, 【total_upQ】:35, 【total_newA】:844, 【total_upA】:0
+2020/08/03 00:10:32 zhihuLogger tmp.py 【question number】:341318637, 【page】:8, 【total_newQ】:7, 【total_upQ】:35, 【total_newA】:877, 【total_upA】:0
+2020/08/03 00:10:40 zhihuLogger tmp.py 【question number】:275655239, 【page】:8, 【total_newQ】:7, 【total_upQ】:35, 【total_newA】:881, 【total_upA】:0
+2020/08/03 00:10:53 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:10:53 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:10:53 zhihuLogger tmp.py 【question number】:20676144, 【page】:8, 【total_newQ】:7, 【total_upQ】:37, 【total_newA】:888, 【total_upA】:0
+2020/08/03 00:11:04 zhihuLogger tmp.py 【commentError】https://www.zhihu.com/question/275655239/answer/617495651
+2020/08/03 00:11:04 zhihuLogger tmp.py 【question number】:275655239, 【page】:9, 【total_newQ】:7, 【total_upQ】:37, 【total_newA】:937, 【total_upA】:0
+2020/08/03 00:11:04 zhihuLogger tmp.py 【question number】:341318637, 【page】:9, 【total_newQ】:7, 【total_upQ】:37, 【total_newA】:937, 【total_upA】:0
+2020/08/03 00:11:25 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:11:26 zhihuLogger tmp.py 【question number】:20676144, 【page】:9, 【total_newQ】:7, 【total_upQ】:38, 【total_newA】:956, 【total_upA】:0
+2020/08/03 00:11:37 zhihuLogger tmp.py 【update question】:在国家电网工作的日子是怎样的？ 【keyword】:电网
+2020/08/03 00:11:37 zhihuLogger tmp.py 【question number】:341318637, 【page】:10, 【total_newQ】:7, 【total_upQ】:39, 【total_newA】:992, 【total_upA】:0
+2020/08/03 00:11:46 zhihuLogger tmp.py 【question number】:275655239, 【page】:10, 【total_newQ】:7, 【total_upQ】:39, 【total_newA】:995, 【total_upA】:0
+2020/08/03 00:11:58 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:11:58 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:11:58 zhihuLogger tmp.py 【question number】:20676144, 【page】:10, 【total_newQ】:7, 【total_upQ】:41, 【total_newA】:1022, 【total_upA】:0
+2020/08/03 00:12:09 zhihuLogger tmp.py 【update question】:在国家电网工作的日子是怎样的？ 【keyword】:电网
+2020/08/03 00:12:09 zhihuLogger tmp.py 【question number】:341318637, 【page】:11, 【total_newQ】:7, 【total_upQ】:42, 【total_newA】:1049, 【total_upA】:0
+2020/08/03 00:12:17 zhihuLogger tmp.py 【question number】:275655239, 【page】:11, 【total_newQ】:7, 【total_upQ】:42, 【total_newA】:1052, 【total_upA】:0
+2020/08/03 00:12:24 zhihuLogger tmp.py 【timeError】:https://www.zhihu.com/question/20676144/answer/29641531
+2020/08/03 00:12:24 zhihuLogger tmp.py 【refineAnswer】:https://www.zhihu.com/question/20676144/answer/29641531
+2020/08/03 00:12:24 zhihuLogger tmp.py 【commentError】https://www.zhihu.com/question/20676144/answer/29641531
+2020/08/03 00:12:29 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:12:29 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:12:29 zhihuLogger tmp.py 【question number】:20676144, 【page】:11, 【total_newQ】:7, 【total_upQ】:44, 【total_newA】:1088, 【total_upA】:0
+2020/08/03 00:12:39 zhihuLogger tmp.py 【update question】:在国家电网工作的日子是怎样的？ 【keyword】:电网
+2020/08/03 00:12:39 zhihuLogger tmp.py 【question number】:341318637, 【page】:12, 【total_newQ】:7, 【total_upQ】:45, 【total_newA】:1107, 【total_upA】:0
+2020/08/03 00:12:39 zhihuLogger tmp.py 【question number】:275655239, 【page】:12, 【total_newQ】:7, 【total_upQ】:45, 【total_newA】:1108, 【total_upA】:0
+2020/08/03 00:13:19 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:13:19 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:13:19 zhihuLogger tmp.py 【question number】:20676144, 【page】:12, 【total_newQ】:7, 【total_upQ】:47, 【total_newA】:1156, 【total_upA】:0
+2020/08/03 00:13:28 zhihuLogger tmp.py 【question number】:275655239, 【page】:13, 【total_newQ】:7, 【total_upQ】:47, 【total_newA】:1165, 【total_upA】:0
+2020/08/03 00:13:28 zhihuLogger tmp.py 【question number】:341318637, 【page】:13, 【total_newQ】:7, 【total_upQ】:47, 【total_newA】:1165, 【total_upA】:0
+2020/08/03 00:13:51 zhihuLogger tmp.py 【update question】:在国家电网工作的日子是怎样的？ 【keyword】:电网
+2020/08/03 00:13:51 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:13:51 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:13:51 zhihuLogger tmp.py 【question number】:275655239, 【page】:14, 【total_newQ】:7, 【total_upQ】:50, 【total_newA】:1225, 【total_upA】:0
+2020/08/03 00:13:52 zhihuLogger tmp.py 【question number】:20676144, 【page】:13, 【total_newQ】:7, 【total_upQ】:50, 【total_newA】:1225, 【total_upA】:0
+2020/08/03 00:13:52 zhihuLogger tmp.py 【question number】:341318637, 【page】:14, 【total_newQ】:7, 【total_upQ】:50, 【total_newA】:1225, 【total_upA】:0
+2020/08/03 00:14:21 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:14:21 zhihuLogger tmp.py 【update question】:在国家电网工作的日子是怎样的？ 【keyword】:电网
+2020/08/03 00:14:21 zhihuLogger tmp.py 【question number】:20676144, 【page】:14, 【total_newQ】:7, 【total_upQ】:52, 【total_newA】:1232, 【total_upA】:0
+2020/08/03 00:14:21 zhihuLogger tmp.py 【question number】:341318637, 【page】:15, 【total_newQ】:7, 【total_upQ】:52, 【total_newA】:1266, 【total_upA】:0
+2020/08/03 00:14:29 zhihuLogger tmp.py 【question number】:275655239, 【page】:15, 【total_newQ】:7, 【total_upQ】:52, 【total_newA】:1267, 【total_upA】:0
+2020/08/03 00:14:43 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:14:43 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:14:44 zhihuLogger tmp.py 【question number】:341318637, 【page】:16, 【total_newQ】:7, 【total_upQ】:54, 【total_newA】:1306, 【total_upA】:0
+2020/08/03 00:14:52 zhihuLogger tmp.py 【question number】:275655239, 【page】:16, 【total_newQ】:7, 【total_upQ】:54, 【total_newA】:1307, 【total_upA】:0
+2020/08/03 00:15:05 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:15:05 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:15:06 zhihuLogger tmp.py 【question number】:341318637, 【page】:17, 【total_newQ】:7, 【total_upQ】:56, 【total_newA】:1346, 【total_upA】:0
+2020/08/03 00:15:13 zhihuLogger tmp.py 【question number】:275655239, 【page】:17, 【total_newQ】:7, 【total_upQ】:56, 【total_newA】:1347, 【total_upA】:0
+2020/08/03 00:15:26 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:15:26 zhihuLogger tmp.py 【question number】:341318637, 【page】:18, 【total_newQ】:7, 【total_upQ】:57, 【total_newA】:1386, 【total_upA】:0
+2020/08/03 00:15:34 zhihuLogger tmp.py 【question number】:275655239, 【page】:18, 【total_newQ】:7, 【total_upQ】:57, 【total_newA】:1387, 【total_upA】:0
+2020/08/03 00:15:47 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:15:48 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:15:48 zhihuLogger tmp.py 【question number】:341318637, 【page】:19, 【total_newQ】:7, 【total_upQ】:59, 【total_newA】:1426, 【total_upA】:0
+2020/08/03 00:15:57 zhihuLogger tmp.py 【question number】:275655239, 【page】:19, 【total_newQ】:7, 【total_upQ】:59, 【total_newA】:1427, 【total_upA】:0
+2020/08/03 00:16:11 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:16:11 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:16:11 zhihuLogger tmp.py 【question number】:341318637, 【page】:20, 【total_newQ】:7, 【total_upQ】:61, 【total_newA】:1466, 【total_upA】:0
+2020/08/03 00:16:19 zhihuLogger tmp.py 【question number】:275655239, 【page】:20, 【total_newQ】:7, 【total_upQ】:61, 【total_newA】:1467, 【total_upA】:0
+2020/08/03 00:16:31 zhihuLogger tmp.py 【update question】:要不要去国家电网？ 【keyword】:电网
+2020/08/03 00:16:31 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:16:32 zhihuLogger tmp.py 【question number】:341318637, 【page】:21, 【total_newQ】:7, 【total_upQ】:63, 【total_newA】:1500, 【total_upA】:0
+2020/08/03 00:16:32 zhihuLogger tmp.py 【question number】:275655239, 【page】:21, 【total_newQ】:7, 【total_upQ】:63, 【total_newA】:1504, 【total_upA】:0
+2020/08/03 00:16:42 zhihuLogger tmp.py 【question number】:275655239, 【page】:22, 【total_newQ】:7, 【total_upQ】:63, 【total_newA】:1524, 【total_upA】:0
+2020/08/03 00:16:54 zhihuLogger tmp.py 【question number】:275655239, 【page】:23, 【total_newQ】:7, 【total_upQ】:63, 【total_newA】:1544, 【total_upA】:0
+2020/08/03 00:17:04 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:17:04 zhihuLogger tmp.py 【question number】:275655239, 【page】:24, 【total_newQ】:7, 【total_upQ】:64, 【total_newA】:1564, 【total_upA】:0
+2020/08/03 00:17:14 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:17:14 zhihuLogger tmp.py 【question number】:275655239, 【page】:25, 【total_newQ】:7, 【total_upQ】:65, 【total_newA】:1584, 【total_upA】:0
+2020/08/03 00:17:24 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:17:24 zhihuLogger tmp.py 【question number】:275655239, 【page】:26, 【total_newQ】:7, 【total_upQ】:66, 【total_newA】:1604, 【total_upA】:0
+2020/08/03 00:17:34 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:17:35 zhihuLogger tmp.py 【question number】:275655239, 【page】:27, 【total_newQ】:7, 【total_upQ】:67, 【total_newA】:1624, 【total_upA】:0
+2020/08/03 00:17:45 zhihuLogger tmp.py 【question number】:275655239, 【page】:28, 【total_newQ】:7, 【total_upQ】:67, 【total_newA】:1644, 【total_upA】:0
+2020/08/03 00:17:56 zhihuLogger tmp.py 【question number】:275655239, 【page】:29, 【total_newQ】:7, 【total_upQ】:67, 【total_newA】:1664, 【total_upA】:0
+2020/08/03 00:18:08 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:18:08 zhihuLogger tmp.py 【question number】:275655239, 【page】:30, 【total_newQ】:7, 【total_upQ】:68, 【total_newA】:1684, 【total_upA】:0
+2020/08/03 00:18:19 zhihuLogger tmp.py 【question number】:275655239, 【page】:31, 【total_newQ】:7, 【total_upQ】:68, 【total_newA】:1704, 【total_upA】:0
+2020/08/03 00:18:30 zhihuLogger tmp.py 【question number】:275655239, 【page】:32, 【total_newQ】:7, 【total_upQ】:68, 【total_newA】:1724, 【total_upA】:0
+2020/08/03 00:18:40 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:18:40 zhihuLogger tmp.py 【question number】:275655239, 【page】:33, 【total_newQ】:7, 【total_upQ】:69, 【total_newA】:1744, 【total_upA】:0
+2020/08/03 00:18:55 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:18:56 zhihuLogger tmp.py 【commentError】https://www.zhihu.com/question/275655239/answer/495109408
+2020/08/03 00:18:56 zhihuLogger tmp.py 【question number】:275655239, 【page】:34, 【total_newQ】:7, 【total_upQ】:70, 【total_newA】:1764, 【total_upA】:0
+2020/08/03 00:19:07 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:19:07 zhihuLogger tmp.py 【question number】:275655239, 【page】:35, 【total_newQ】:7, 【total_upQ】:71, 【total_newA】:1784, 【total_upA】:0
+2020/08/03 00:19:19 zhihuLogger tmp.py 【question number】:275655239, 【page】:36, 【total_newQ】:7, 【total_upQ】:71, 【total_newA】:1804, 【total_upA】:0
+2020/08/03 00:19:30 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:19:30 zhihuLogger tmp.py 【question number】:275655239, 【page】:37, 【total_newQ】:7, 【total_upQ】:72, 【total_newA】:1824, 【total_upA】:0
+2020/08/03 00:19:44 zhihuLogger tmp.py 【question number】:275655239, 【page】:38, 【total_newQ】:7, 【total_upQ】:72, 【total_newA】:1844, 【total_upA】:0
+2020/08/03 00:19:56 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:19:56 zhihuLogger tmp.py 【question number】:275655239, 【page】:39, 【total_newQ】:7, 【total_upQ】:73, 【total_newA】:1864, 【total_upA】:0
+2020/08/03 00:20:07 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:20:08 zhihuLogger tmp.py 【question number】:275655239, 【page】:40, 【total_newQ】:7, 【total_upQ】:74, 【total_newA】:1884, 【total_upA】:0
+2020/08/03 00:20:19 zhihuLogger tmp.py 【question number】:275655239, 【page】:41, 【total_newQ】:7, 【total_upQ】:74, 【total_newA】:1904, 【total_upA】:0
+2020/08/03 00:20:30 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:20:31 zhihuLogger tmp.py 【question number】:275655239, 【page】:42, 【total_newQ】:7, 【total_upQ】:75, 【total_newA】:1924, 【total_upA】:0
+2020/08/03 00:20:43 zhihuLogger tmp.py 【question number】:275655239, 【page】:43, 【total_newQ】:7, 【total_upQ】:75, 【total_newA】:1944, 【total_upA】:0
+2020/08/03 00:20:54 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:20:55 zhihuLogger tmp.py 【question number】:275655239, 【page】:44, 【total_newQ】:7, 【total_upQ】:76, 【total_newA】:1964, 【total_upA】:0
+2020/08/03 00:21:07 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:21:07 zhihuLogger tmp.py 【question number】:275655239, 【page】:45, 【total_newQ】:7, 【total_upQ】:77, 【total_newA】:1984, 【total_upA】:0
+2020/08/03 00:21:19 zhihuLogger tmp.py 【refineAnswer】:https://www.zhihu.com/question/275655239/answer/423002472
+2020/08/03 00:21:19 zhihuLogger tmp.py 【question number】:275655239, 【page】:46, 【total_newQ】:7, 【total_upQ】:77, 【total_newA】:2004, 【total_upA】:0
+2020/08/03 00:21:30 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:21:30 zhihuLogger tmp.py 【question number】:275655239, 【page】:47, 【total_newQ】:7, 【total_upQ】:78, 【total_newA】:2024, 【total_upA】:0
+2020/08/03 00:21:42 zhihuLogger tmp.py 【question number】:275655239, 【page】:48, 【total_newQ】:7, 【total_upQ】:78, 【total_newA】:2044, 【total_upA】:0
+2020/08/03 00:21:52 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:21:52 zhihuLogger tmp.py 【question number】:275655239, 【page】:49, 【total_newQ】:7, 【total_upQ】:79, 【total_newA】:2064, 【total_upA】:0
+2020/08/03 00:22:04 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:22:04 zhihuLogger tmp.py 【question number】:275655239, 【page】:50, 【total_newQ】:7, 【total_upQ】:80, 【total_newA】:2084, 【total_upA】:0
+2020/08/03 00:22:15 zhihuLogger tmp.py 【question number】:275655239, 【page】:51, 【total_newQ】:7, 【total_upQ】:80, 【total_newA】:2104, 【total_upA】:0
+2020/08/03 00:22:25 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:22:26 zhihuLogger tmp.py 【question number】:275655239, 【page】:52, 【total_newQ】:7, 【total_upQ】:81, 【total_newA】:2124, 【total_upA】:0
+2020/08/03 00:22:37 zhihuLogger tmp.py 【question number】:275655239, 【page】:53, 【total_newQ】:7, 【total_upQ】:81, 【total_newA】:2144, 【total_upA】:0
+2020/08/03 00:22:47 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:22:47 zhihuLogger tmp.py 【question number】:275655239, 【page】:54, 【total_newQ】:7, 【total_upQ】:82, 【total_newA】:2164, 【total_upA】:0
+2020/08/03 00:22:58 zhihuLogger tmp.py 【question number】:275655239, 【page】:55, 【total_newQ】:7, 【total_upQ】:82, 【total_newA】:2184, 【total_upA】:0
+2020/08/03 00:23:10 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:23:10 zhihuLogger tmp.py 【commentError】https://www.zhihu.com/question/275655239/answer/459435596
+2020/08/03 00:23:10 zhihuLogger tmp.py 【question number】:275655239, 【page】:56, 【total_newQ】:7, 【total_upQ】:83, 【total_newA】:2204, 【total_upA】:0
+2020/08/03 00:23:21 zhihuLogger tmp.py 【question number】:275655239, 【page】:57, 【total_newQ】:7, 【total_upQ】:83, 【total_newA】:2224, 【total_upA】:0
+2020/08/03 00:23:31 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:23:31 zhihuLogger tmp.py 【question number】:275655239, 【page】:58, 【total_newQ】:7, 【total_upQ】:84, 【total_newA】:2244, 【total_upA】:0
+2020/08/03 00:23:42 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:23:42 zhihuLogger tmp.py 【question number】:275655239, 【page】:59, 【total_newQ】:7, 【total_upQ】:85, 【total_newA】:2264, 【total_upA】:0
+2020/08/03 00:23:52 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:23:52 zhihuLogger tmp.py 【question number】:275655239, 【page】:60, 【total_newQ】:7, 【total_upQ】:86, 【total_newA】:2284, 【total_upA】:0
+2020/08/03 00:24:03 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:24:03 zhihuLogger tmp.py 【question number】:275655239, 【page】:61, 【total_newQ】:7, 【total_upQ】:87, 【total_newA】:2304, 【total_upA】:0
+2020/08/03 00:24:13 zhihuLogger tmp.py 【question number】:275655239, 【page】:62, 【total_newQ】:7, 【total_upQ】:87, 【total_newA】:2324, 【total_upA】:0
+2020/08/03 00:24:25 zhihuLogger tmp.py 【question number】:275655239, 【page】:63, 【total_newQ】:7, 【total_upQ】:87, 【total_newA】:2344, 【total_upA】:0
+2020/08/03 00:24:35 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:24:36 zhihuLogger tmp.py 【question number】:275655239, 【page】:64, 【total_newQ】:7, 【total_upQ】:88, 【total_newA】:2364, 【total_upA】:0
+2020/08/03 00:24:45 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:24:46 zhihuLogger tmp.py 【question number】:275655239, 【page】:65, 【total_newQ】:7, 【total_upQ】:89, 【total_newA】:2384, 【total_upA】:0
+2020/08/03 00:24:56 zhihuLogger tmp.py 【question number】:275655239, 【page】:66, 【total_newQ】:7, 【total_upQ】:89, 【total_newA】:2404, 【total_upA】:0
+2020/08/03 00:25:07 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:25:07 zhihuLogger tmp.py 【question number】:275655239, 【page】:67, 【total_newQ】:7, 【total_upQ】:90, 【total_newA】:2424, 【total_upA】:0
+2020/08/03 00:25:17 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:25:18 zhihuLogger tmp.py 【question number】:275655239, 【page】:68, 【total_newQ】:7, 【total_upQ】:91, 【total_newA】:2444, 【total_upA】:0
+2020/08/03 00:25:28 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:25:28 zhihuLogger tmp.py 【question number】:275655239, 【page】:69, 【total_newQ】:7, 【total_upQ】:92, 【total_newA】:2464, 【total_upA】:0
+2020/08/03 00:25:39 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:25:39 zhihuLogger tmp.py 【question number】:275655239, 【page】:70, 【total_newQ】:7, 【total_upQ】:93, 【total_newA】:2484, 【total_upA】:0
+2020/08/03 00:25:49 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:25:50 zhihuLogger tmp.py 【question number】:275655239, 【page】:71, 【total_newQ】:7, 【total_upQ】:94, 【total_newA】:2504, 【total_upA】:0
+2020/08/03 00:26:00 zhihuLogger tmp.py 【question number】:275655239, 【page】:72, 【total_newQ】:7, 【total_upQ】:94, 【total_newA】:2524, 【total_upA】:0
+2020/08/03 00:26:10 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:26:11 zhihuLogger tmp.py 【commentError】https://www.zhihu.com/question/275655239/answer/444343690
+2020/08/03 00:26:11 zhihuLogger tmp.py 【question number】:275655239, 【page】:73, 【total_newQ】:7, 【total_upQ】:95, 【total_newA】:2544, 【total_upA】:0
+2020/08/03 00:26:21 zhihuLogger tmp.py 【question number】:275655239, 【page】:74, 【total_newQ】:7, 【total_upQ】:95, 【total_newA】:2564, 【total_upA】:0
+2020/08/03 00:26:32 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:26:32 zhihuLogger tmp.py 【question number】:275655239, 【page】:75, 【total_newQ】:7, 【total_upQ】:96, 【total_newA】:2584, 【total_upA】:0
+2020/08/03 00:26:44 zhihuLogger tmp.py 【question number】:275655239, 【page】:76, 【total_newQ】:7, 【total_upQ】:96, 【total_newA】:2604, 【total_upA】:0
+2020/08/03 00:26:54 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:26:54 zhihuLogger tmp.py 【question number】:275655239, 【page】:77, 【total_newQ】:7, 【total_upQ】:97, 【total_newA】:2624, 【total_upA】:0
+2020/08/03 00:27:04 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:27:05 zhihuLogger tmp.py 【question number】:275655239, 【page】:78, 【total_newQ】:7, 【total_upQ】:98, 【total_newA】:2644, 【total_upA】:0
+2020/08/03 00:27:16 zhihuLogger tmp.py 【question number】:275655239, 【page】:79, 【total_newQ】:7, 【total_upQ】:98, 【total_newA】:2664, 【total_upA】:0
+2020/08/03 00:27:26 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:27:26 zhihuLogger tmp.py 【question number】:275655239, 【page】:80, 【total_newQ】:7, 【total_upQ】:99, 【total_newA】:2684, 【total_upA】:0
+2020/08/03 00:27:36 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:27:37 zhihuLogger tmp.py 【question number】:275655239, 【page】:81, 【total_newQ】:7, 【total_upQ】:100, 【total_newA】:2704, 【total_upA】:0
+2020/08/03 00:27:48 zhihuLogger tmp.py 【question number】:275655239, 【page】:82, 【total_newQ】:7, 【total_upQ】:100, 【total_newA】:2724, 【total_upA】:0
+2020/08/03 00:27:59 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:27:59 zhihuLogger tmp.py 【question number】:275655239, 【page】:83, 【total_newQ】:7, 【total_upQ】:101, 【total_newA】:2744, 【total_upA】:0
+2020/08/03 00:28:09 zhihuLogger tmp.py 【question number】:275655239, 【page】:84, 【total_newQ】:7, 【total_upQ】:101, 【total_newA】:2764, 【total_upA】:0
+2020/08/03 00:28:20 zhihuLogger tmp.py 【question number】:275655239, 【page】:85, 【total_newQ】:7, 【total_upQ】:101, 【total_newA】:2784, 【total_upA】:0
+2020/08/03 00:28:30 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:28:30 zhihuLogger tmp.py 【question number】:275655239, 【page】:86, 【total_newQ】:7, 【total_upQ】:102, 【total_newA】:2804, 【total_upA】:0
+2020/08/03 00:28:41 zhihuLogger tmp.py 【question number】:275655239, 【page】:87, 【total_newQ】:7, 【total_upQ】:102, 【total_newA】:2824, 【total_upA】:0
+2020/08/03 00:28:51 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:28:51 zhihuLogger tmp.py 【question number】:275655239, 【page】:88, 【total_newQ】:7, 【total_upQ】:103, 【total_newA】:2844, 【total_upA】:0
+2020/08/03 00:29:02 zhihuLogger tmp.py 【question number】:275655239, 【page】:89, 【total_newQ】:7, 【total_upQ】:103, 【total_newA】:2864, 【total_upA】:0
+2020/08/03 00:29:13 zhihuLogger tmp.py 【question number】:275655239, 【page】:90, 【total_newQ】:7, 【total_upQ】:103, 【total_newA】:2884, 【total_upA】:0
+2020/08/03 00:29:24 zhihuLogger tmp.py 【question number】:275655239, 【page】:91, 【total_newQ】:7, 【total_upQ】:103, 【total_newA】:2904, 【total_upA】:0
+2020/08/03 00:29:36 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:29:36 zhihuLogger tmp.py 【question number】:275655239, 【page】:92, 【total_newQ】:7, 【total_upQ】:104, 【total_newA】:2924, 【total_upA】:0
+2020/08/03 00:29:47 zhihuLogger tmp.py 【question number】:275655239, 【page】:93, 【total_newQ】:7, 【total_upQ】:104, 【total_newA】:2944, 【total_upA】:0
+2020/08/03 00:29:57 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:29:57 zhihuLogger tmp.py 【question number】:275655239, 【page】:94, 【total_newQ】:7, 【total_upQ】:105, 【total_newA】:2964, 【total_upA】:0
+2020/08/03 00:30:08 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:30:08 zhihuLogger tmp.py 【question number】:275655239, 【page】:95, 【total_newQ】:7, 【total_upQ】:106, 【total_newA】:2984, 【total_upA】:0
+2020/08/03 00:30:19 zhihuLogger tmp.py 【question number】:275655239, 【page】:96, 【total_newQ】:7, 【total_upQ】:106, 【total_newA】:3004, 【total_upA】:0
+2020/08/03 00:30:29 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:30:30 zhihuLogger tmp.py 【question number】:275655239, 【page】:97, 【total_newQ】:7, 【total_upQ】:107, 【total_newA】:3024, 【total_upA】:0
+2020/08/03 00:30:40 zhihuLogger tmp.py 【question number】:275655239, 【page】:98, 【total_newQ】:7, 【total_upQ】:107, 【total_newA】:3044, 【total_upA】:0
+2020/08/03 00:30:50 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:30:51 zhihuLogger tmp.py 【question number】:275655239, 【page】:99, 【total_newQ】:7, 【total_upQ】:108, 【total_newA】:3064, 【total_upA】:0
+2020/08/03 00:31:01 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:31:01 zhihuLogger tmp.py 【question number】:275655239, 【page】:100, 【total_newQ】:7, 【total_upQ】:109, 【total_newA】:3084, 【total_upA】:0
+2020/08/03 00:31:12 zhihuLogger tmp.py 【question number】:275655239, 【page】:101, 【total_newQ】:7, 【total_upQ】:109, 【total_newA】:3104, 【total_upA】:0
+2020/08/03 00:31:22 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:31:22 zhihuLogger tmp.py 【question number】:275655239, 【page】:102, 【total_newQ】:7, 【total_upQ】:110, 【total_newA】:3124, 【total_upA】:0
+2020/08/03 00:31:34 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:31:34 zhihuLogger tmp.py 【question number】:275655239, 【page】:103, 【total_newQ】:7, 【total_upQ】:111, 【total_newA】:3144, 【total_upA】:0
+2020/08/03 00:31:46 zhihuLogger tmp.py 【question number】:275655239, 【page】:104, 【total_newQ】:7, 【total_upQ】:111, 【total_newA】:3164, 【total_upA】:0
+2020/08/03 00:31:58 zhihuLogger tmp.py 【question number】:275655239, 【page】:105, 【total_newQ】:7, 【total_upQ】:111, 【total_newA】:3184, 【total_upA】:0
+2020/08/03 00:32:09 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:32:10 zhihuLogger tmp.py 【question number】:275655239, 【page】:106, 【total_newQ】:7, 【total_upQ】:112, 【total_newA】:3204, 【total_upA】:0
+2020/08/03 00:32:24 zhihuLogger tmp.py 【question number】:275655239, 【page】:107, 【total_newQ】:7, 【total_upQ】:112, 【total_newA】:3224, 【total_upA】:0
+2020/08/03 00:32:36 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:32:36 zhihuLogger tmp.py 【question number】:275655239, 【page】:108, 【total_newQ】:7, 【total_upQ】:113, 【total_newA】:3244, 【total_upA】:0
+2020/08/03 00:32:48 zhihuLogger tmp.py 【question number】:275655239, 【page】:109, 【total_newQ】:7, 【total_upQ】:113, 【total_newA】:3264, 【total_upA】:0
+2020/08/03 00:32:59 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:33:00 zhihuLogger tmp.py 【question number】:275655239, 【page】:110, 【total_newQ】:7, 【total_upQ】:114, 【total_newA】:3284, 【total_upA】:0
+2020/08/03 00:33:12 zhihuLogger tmp.py 【question number】:275655239, 【page】:111, 【total_newQ】:7, 【total_upQ】:114, 【total_newA】:3304, 【total_upA】:0
+2020/08/03 00:33:24 zhihuLogger tmp.py 【question number】:275655239, 【page】:112, 【total_newQ】:7, 【total_upQ】:114, 【total_newA】:3324, 【total_upA】:0
+2020/08/03 00:33:37 zhihuLogger tmp.py 【update question】:国家电网到底有多强大？ 【keyword】:电网
+2020/08/03 00:33:37 zhihuLogger tmp.py 【refineAnswer】:https://www.zhihu.com/question/275655239/answer/418636433
+2020/08/03 00:33:37 zhihuLogger tmp.py 【question number】:275655239, 【page】:113, 【total_newQ】:7, 【total_upQ】:115, 【total_newA】:3344, 【total_upA】:0
+2020/08/04 00:01:14 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-04----------------------------------------
+2020/08/04 00:01:14 zhihuLogger tmp.py 【电网】【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/04 00:01:14 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/20676144, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/04 00:01:25 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/275655239, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/04 00:01:42 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/341318637, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/04 00:01:51 zhihuLogger tmp.py 【new question】:在国家电网工作的日子是怎样的？, 【keyword】:电网, 【total answer number】:262
+2020/08/04 00:01:53 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21543224/answer/152172562, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/04 00:02:04 zhihuLogger tmp.py 【new question】:国家电网到底有多强大？, 【keyword】:电网, 【total answer number】:2,709
+2020/08/04 00:02:04 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21721370, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/04 00:02:16 zhihuLogger tmp.py 【new question】:要不要去国家电网？, 【keyword】:电网, 【total answer number】:419
+2020/08/04 00:02:16 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/346297551/answer/842052597, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/04 00:02:29 zhihuLogger tmp.py 【new question】:怎么才能进入国家电网？, 【keyword】:电网, 【total answer number】:91
+2020/08/04 00:02:29 zhihuLogger tmp.py 【电网】【sub url】:https://daily.zhihu.com/story/9687262, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/04 00:02:29 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/topic/19600175/hot, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/04 00:02:29 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/24944988, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/04 00:02:41 zhihuLogger tmp.py 【new question】:电网公司的待遇如何？, 【keyword】:电网, 【total answer number】:149
+2020/08/04 00:02:41 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/36694354, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/04 00:02:51 zhihuLogger tmp.py 【new question】:国家电网算是很好的工作吗？, 【keyword】:电网, 【total answer number】:123
+2020/08/04 00:02:55 zhihuLogger tmp.py 【new question】:在南方电网工作的体验是怎样的？, 【keyword】:电网, 【total answer number】:42
+2020/08/04 00:02:55 zhihuLogger tmp.py 【new question】:国家电网的待遇如何？, 【keyword】:电网, 【total answer number】:29
+2020/08/04 00:02:55 zhihuLogger tmp.py 【question number】:20676144, 【page】:1, 【total_newQ】:8, 【total_upQ】:0, 【total_newA】:103, 【total_upA】:0
+2020/08/04 00:03:04 zhihuLogger tmp.py 【question number】:275655239, 【page】:1, 【total_newQ】:8, 【total_upQ】:0, 【total_newA】:131, 【total_upA】:0
+2020/08/04 00:03:04 zhihuLogger tmp.py 【question number】:341318637, 【page】:1, 【total_newQ】:8, 【total_upQ】:0, 【total_newA】:148, 【total_upA】:0
+2020/08/04 00:03:04 zhihuLogger tmp.py 【question number】:21543224, 【page】:1, 【total_newQ】:8, 【total_upQ】:0, 【total_newA】:153, 【total_upA】:0
+2020/08/04 00:03:04 zhihuLogger tmp.py 【question number】:21721370, 【page】:1, 【total_newQ】:8, 【total_upQ】:0, 【total_newA】:154, 【total_upA】:0
+2020/08/04 00:03:04 zhihuLogger tmp.py 【question number】:346297551, 【page】:1, 【total_newQ】:8, 【total_upQ】:0, 【total_newA】:154, 【total_upA】:0
+2020/08/04 00:03:04 zhihuLogger tmp.py 【question number】:24944988, 【page】:1, 【total_newQ】:8, 【total_upQ】:0, 【total_newA】:158, 【total_upA】:0
+2020/08/04 00:03:04 zhihuLogger tmp.py 【question number】:36694354, 【page】:1, 【total_newQ】:8, 【total_upQ】:0, 【total_newA】:160, 【total_upA】:0
+2020/08/05 15:40:50 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-05----------------------------------------
+2020/08/05 15:40:51 zhihuLogger tmp.py 【电网】【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:40:51 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/20676144, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:41:01 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/275655239, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:41:08 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/341318637, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:41:09 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21721370, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:41:09 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21543224/answer/152172562, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:41:09 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/topic/19598443, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:41:09 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/346297551/answer/842052597, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:41:09 zhihuLogger tmp.py 【电网】【sub url】:https://daily.zhihu.com/story/9687262, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:41:09 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/topic/19600175/hot, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:41:09 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/24944988, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:41:10 zhihuLogger tmp.py 【question number】:20676144, 【page】:1, finish!
+2020/08/05 15:50:42 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-05----------------------------------------
+2020/08/05 15:50:43 zhihuLogger tmp.py 【电力】【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:50:43 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/380107729, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:53:26 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/341318637, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:53:36 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/people/dian-li-gong-cheng-93/answers, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:53:36 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/topic/19593899, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:53:37 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/people/mu-yang-ren-44-87/answers, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:53:37 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/20676144, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:53:45 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/people/dian-li-ren-sheng/pins, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:53:45 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/60901074/answer/182410653, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:55:16 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/topic/19859770/top-answers, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:55:16 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/20245081, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 15:55:27 zhihuLogger tmp.py 【question number】:341318637, 【page】:1, finish!
+2020/08/05 15:55:39 zhihuLogger tmp.py 【question number】:20676144, 【page】:1, finish!
+2020/08/05 15:55:49 zhihuLogger tmp.py 【question number】:20245081, 【page】:1, finish!
+2020/08/05 15:55:59 zhihuLogger tmp.py 【question number】:341318637, 【page】:2, finish!
+2020/08/05 15:55:59 zhihuLogger tmp.py 【question number】:60901074, 【page】:1, finish!
+2020/08/05 15:56:07 zhihuLogger tmp.py 【question number】:20676144, 【page】:2, finish!
+2020/08/05 15:56:22 zhihuLogger tmp.py 【question number】:20245081, 【page】:2, finish!
+2020/08/05 15:56:22 zhihuLogger tmp.py 【question number】:341318637, 【page】:3, finish!
+2020/08/05 15:56:37 zhihuLogger tmp.py 【question number】:20676144, 【page】:3, finish!
+2020/08/05 15:56:48 zhihuLogger tmp.py 【question number】:341318637, 【page】:4, finish!
+2020/08/05 15:56:48 zhihuLogger tmp.py 【question number】:20676144, 【page】:4, finish!
+2020/08/05 15:57:09 zhihuLogger tmp.py 【question number】:20676144, 【page】:5, finish!
+2020/08/05 15:57:16 zhihuLogger tmp.py 【question number】:341318637, 【page】:5, finish!
+2020/08/05 15:57:31 zhihuLogger tmp.py 【question number】:20676144, 【page】:6, finish!
+2020/08/05 15:57:44 zhihuLogger tmp.py 【question number】:341318637, 【page】:6, finish!
+2020/08/05 15:57:56 zhihuLogger tmp.py 【question number】:341318637, 【page】:7, finish!
+2020/08/05 15:58:04 zhihuLogger tmp.py 【question number】:20676144, 【page】:7, finish!
+2020/08/05 15:58:16 zhihuLogger tmp.py 【question number】:341318637, 【page】:8, finish!
+2020/08/05 15:58:23 zhihuLogger tmp.py 【question number】:20676144, 【page】:8, finish!
+2020/08/05 15:58:36 zhihuLogger tmp.py 【question number】:341318637, 【page】:9, finish!
+2020/08/05 15:58:44 zhihuLogger tmp.py 【question number】:20676144, 【page】:9, finish!
+2020/08/05 15:58:56 zhihuLogger tmp.py 【question number】:341318637, 【page】:10, finish!
+2020/08/05 15:59:06 zhihuLogger tmp.py 【question number】:20676144, 【page】:10, finish!
+2020/08/05 15:59:21 zhihuLogger tmp.py 【question number】:341318637, 【page】:11, finish!
+2020/08/05 15:59:29 zhihuLogger tmp.py 【question number】:20676144, 【page】:11, finish!
+2020/08/05 15:59:41 zhihuLogger tmp.py 【question number】:341318637, 【page】:12, finish!
+2020/08/05 16:01:03 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-05----------------------------------------
+2020/08/05 16:01:03 zhihuLogger tmp.py 【电力】【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 16:01:03 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/380107729, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 16:01:04 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/341318637, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 16:01:04 zhihuLogger tmp.py 断点，问题341318637从第13页开始请求
+2020/08/05 16:04:02 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/people/dian-li-gong-cheng-93/answers, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 16:04:02 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/topic/19593899, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 16:04:02 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/people/mu-yang-ren-44-87/answers, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 16:04:03 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/20676144, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 16:04:03 zhihuLogger tmp.py 断点，问题20676144从第12页开始请求
+2020/08/05 18:22:48 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-05----------------------------------------
+2020/08/05 18:22:50 zhihuLogger tmp.py 【用电】【start url】:https://www.baidu.com/s?wd=%E7%94%A8%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:22:50 zhihuLogger tmp.py 【用电】【sub url】:https://www.zhihu.com/question/264890930, 【start url】:https://www.baidu.com/s?wd=%E7%94%A8%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:23:26 zhihuLogger tmp.py 【用电】【sub url】:http://zhihu.com/question/411928068, 【start url】:https://www.baidu.com/s?wd=%E7%94%A8%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:23:26 zhihuLogger tmp.py 【用电】【sub url】:https://www.zhihu.com/question/311125865/answer/596528863, 【start url】:https://www.baidu.com/s?wd=%E7%94%A8%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:23:27 zhihuLogger tmp.py 【断电】【start url】:https://www.baidu.com/s?wd=%E6%96%AD%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:23:27 zhihuLogger tmp.py 【断电】【sub url】:https://www.zhihu.com/people/duan-dian-85/activities, 【start url】:https://www.baidu.com/s?wd=%E6%96%AD%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:23:27 zhihuLogger tmp.py 【断电】【sub url】:https://www.zhihu.com/topic/19635138/hot, 【start url】:https://www.baidu.com/s?wd=%E6%96%AD%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:23:27 zhihuLogger tmp.py 【断电】【sub url】:https://zhuanlan.zhihu.com/p/41880615, 【start url】:https://www.baidu.com/s?wd=%E6%96%AD%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:23:27 zhihuLogger tmp.py 【断电】【sub url】:https://www.zhihu.com/question/29028681, 【start url】:https://www.baidu.com/s?wd=%E6%96%AD%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:24:16 zhihuLogger tmp.py 【用电】【sub url】:https://www.zhihu.com/question/369880322/answer/1000511805, 【start url】:https://www.baidu.com/s?wd=%E7%94%A8%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:24:16 zhihuLogger tmp.py 【断电】【sub url】:https://www.zhihu.com/question/313156235, 【start url】:https://www.baidu.com/s?wd=%E6%96%AD%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:25:09 zhihuLogger tmp.py 【用电】【sub url】:https://www.zhihu.com/question/25150690/answer/737827767, 【start url】:https://www.baidu.com/s?wd=%E7%94%A8%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:25:09 zhihuLogger tmp.py 【断电】【sub url】:https://www.zhihu.com/question/338156627/answer/776052586, 【start url】:https://www.baidu.com/s?wd=%E6%96%AD%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:26:00 zhihuLogger tmp.py 【用电】【sub url】:https://www.zhihu.com/question/26040897, 【start url】:https://www.baidu.com/s?wd=%E7%94%A8%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:26:00 zhihuLogger tmp.py 【断电】【sub url】:https://www.zhihu.com/question/394932008/answer/1229616224, 【start url】:https://www.baidu.com/s?wd=%E6%96%AD%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:29:06 zhihuLogger tmp.py 【用电】【sub url】:https://www.zhihu.com/question/275807507, 【start url】:https://www.baidu.com/s?wd=%E7%94%A8%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:29:06 zhihuLogger tmp.py 【断电】【sub url】:https://www.zhihu.com/question/63982446, 【start url】:https://www.baidu.com/s?wd=%E6%96%AD%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:30:23 zhihuLogger tmp.py 【用电】【sub url】:https://www.zhihu.com/question/292719758, 【start url】:https://www.baidu.com/s?wd=%E7%94%A8%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:30:23 zhihuLogger tmp.py 【断电】【sub url】:https://www.zhihu.com/topic/21304171/newest, 【start url】:https://www.baidu.com/s?wd=%E6%96%AD%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:30:23 zhihuLogger tmp.py 【断电】【sub url】:https://www.zhihu.com/collection/468199439, 【start url】:https://www.baidu.com/s?wd=%E6%96%AD%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:31:05 zhihuLogger tmp.py 【用电】【sub url】:https://www.zhihu.com/question/58384591, 【start url】:https://www.baidu.com/s?wd=%E7%94%A8%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:32:39 zhihuLogger tmp.py 【question number】:369880322, 【page】:1, finish!
+2020/08/05 18:32:41 zhihuLogger tmp.py 【用电】【sub url】:https://www.zhihu.com/question/369685655/answer/1002108337, 【start url】:https://www.baidu.com/s?wd=%E7%94%A8%E7%94%B5%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 18:35:24 zhihuLogger tmp.py 【question number】:338156627, 【page】:1, finish!
+2020/08/05 18:35:26 zhihuLogger tmp.py 【question number】:311125865, 【page】:1, finish!
+2020/08/05 18:35:37 zhihuLogger tmp.py 【question number】:264890930, 【page】:1, finish!
+2020/08/05 18:35:38 zhihuLogger tmp.py 【question number】:292719758, 【page】:1, finish!
+2020/08/05 18:35:41 zhihuLogger tmp.py 【question number】:58384591, 【page】:1, finish!
+2020/08/05 18:35:41 zhihuLogger tmp.py 【question number】:275807507, 【page】:1, finish!
+2020/08/05 18:36:00 zhihuLogger tmp.py 【question number】:394932008, 【page】:1, finish!
+2020/08/05 18:36:24 zhihuLogger tmp.py 【question number】:29028681, 【page】:1, finish!
+2020/08/05 18:36:35 zhihuLogger tmp.py 【question number】:313156235, 【page】:1, finish!
+2020/08/05 18:36:49 zhihuLogger tmp.py 【question number】:63982446, 【page】:1, finish!
+2020/08/05 18:36:49 zhihuLogger tmp.py 【question number】:25150690, 【page】:1, finish!
+2020/08/05 18:37:15 zhihuLogger tmp.py 【question number】:25150690, 【page】:2, finish!
+2020/08/05 18:37:28 zhihuLogger tmp.py 【question number】:29028681, 【page】:2, finish!
+2020/08/05 18:37:38 zhihuLogger tmp.py 【question number】:313156235, 【page】:2, finish!
+2020/08/05 18:38:09 zhihuLogger tmp.py 【question number】:29028681, 【page】:3, finish!
+2020/08/05 18:38:10 zhihuLogger tmp.py 【commentError】https://www.zhihu.com/question/313156235/answer/728646621
+2020/08/05 18:38:11 zhihuLogger tmp.py 【question number】:313156235, 【page】:3, finish!
+2020/08/05 18:38:33 zhihuLogger tmp.py 【question number】:313156235, 【page】:4, finish!
+2020/08/05 18:38:56 zhihuLogger tmp.py 【question number】:313156235, 【page】:5, finish!
+2020/08/05 18:39:16 zhihuLogger tmp.py 【question number】:313156235, 【page】:6, finish!
+2020/08/05 18:39:39 zhihuLogger tmp.py 【question number】:313156235, 【page】:7, finish!
+2020/08/05 18:40:01 zhihuLogger tmp.py 【question number】:313156235, 【page】:8, finish!
+2020/08/05 18:40:22 zhihuLogger tmp.py 【question number】:313156235, 【page】:9, finish!
+2020/08/05 18:40:44 zhihuLogger tmp.py 【question number】:313156235, 【page】:10, finish!
+2020/08/05 18:41:08 zhihuLogger tmp.py 【question number】:313156235, 【page】:11, finish!
+2020/08/05 18:41:28 zhihuLogger tmp.py 【question number】:313156235, 【page】:12, finish!
+2020/08/05 18:41:40 zhihuLogger tmp.py 【question number】:313156235, 【page】:13, finish!
+2020/08/05 18:41:52 zhihuLogger tmp.py 【question number】:313156235, 【page】:14, finish!
+2020/08/05 18:42:06 zhihuLogger tmp.py 【question number】:313156235, 【page】:15, finish!
+2020/08/05 18:42:19 zhihuLogger tmp.py 【question number】:313156235, 【page】:16, finish!
+2020/08/05 18:42:40 zhihuLogger tmp.py 【question number】:313156235, 【page】:17, finish!
+2020/08/05 18:42:53 zhihuLogger tmp.py 【question number】:313156235, 【page】:18, finish!
+2020/08/05 18:43:05 zhihuLogger tmp.py 【question number】:313156235, 【page】:19, finish!
+2020/08/05 18:43:19 zhihuLogger tmp.py 【question number】:313156235, 【page】:20, finish!
+2020/08/05 18:43:40 zhihuLogger tmp.py 【question number】:313156235, 【page】:21, finish!
+2020/08/05 18:44:01 zhihuLogger tmp.py 【question number】:313156235, 【page】:22, finish!
+2020/08/05 18:44:24 zhihuLogger tmp.py 【question number】:313156235, 【page】:23, finish!
+2020/08/05 18:44:48 zhihuLogger tmp.py 【question number】:313156235, 【page】:24, finish!
+2020/08/05 18:45:12 zhihuLogger tmp.py 【question number】:313156235, 【page】:25, finish!
+2020/08/05 18:45:33 zhihuLogger tmp.py 【question number】:313156235, 【page】:26, finish!
+2020/08/05 18:45:57 zhihuLogger tmp.py 【question number】:313156235, 【page】:27, finish!
+2020/08/05 18:46:14 zhihuLogger tmp.py 【question number】:313156235, 【page】:28, finish!
+2020/08/05 18:46:36 zhihuLogger tmp.py 【question number】:313156235, 【page】:29, finish!
+2020/08/05 18:46:58 zhihuLogger tmp.py 【question number】:313156235, 【page】:30, finish!
+2020/08/05 18:47:21 zhihuLogger tmp.py 【question number】:313156235, 【page】:31, finish!
+2020/08/05 18:47:42 zhihuLogger tmp.py 【question number】:313156235, 【page】:32, finish!
+2020/08/05 19:30:39 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-05----------------------------------------
+2020/08/05 19:30:39 zhihuLogger tmp.py 【电网】【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 19:30:40 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/20676144, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 19:30:40 zhihuLogger tmp.py 断点，问题20676144从第2页开始请求
+2020/08/05 19:30:48 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/275655239, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 19:31:02 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/341318637, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 19:31:13 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21721370, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 19:31:25 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/36694354, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 19:31:37 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/21543224/answer/152172562, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 19:31:49 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/topic/19598443, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 19:31:49 zhihuLogger tmp.py 【电网】【sub url】:https://daily.zhihu.com/story/9687262, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 19:31:49 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/question/346297551/answer/842052597, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 19:32:02 zhihuLogger tmp.py 【电网】【sub url】:https://www.zhihu.com/topic/19600175/hot, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E7%BD%91%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/05 19:32:53 zhihuLogger tmp.py 【question number】:20676144, 【page】:2, finish!
+2020/08/05 19:33:05 zhihuLogger tmp.py 【question number】:341318637, 【page】:1, finish!
+2020/08/05 19:33:17 zhihuLogger tmp.py 【question number】:21721370, 【page】:1, finish!
+2020/08/05 19:33:17 zhihuLogger tmp.py 【question number】:36694354, 【page】:1, finish!
+2020/08/05 19:33:41 zhihuLogger tmp.py 【question number】:21543224, 【page】:1, finish!
+2020/08/05 19:33:53 zhihuLogger tmp.py 【question number】:346297551, 【page】:1, finish!
+2020/08/05 19:34:30 zhihuLogger tmp.py 【question number】:36694354, 【page】:2, finish!

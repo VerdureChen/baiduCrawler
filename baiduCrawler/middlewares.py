@@ -12,7 +12,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.action_chains import ActionChains
 from scrapy.http import HtmlResponse
 import time
@@ -85,6 +85,14 @@ class BaiducrawlerDownloaderMiddleware(object):
             ActionChains(br).move_by_offset(x, y).context_click().perform()
         ActionChains(br).move_by_offset(-x, -y).click().perform()
 
+    def is_element_present(self, driver, how, what):
+        try:
+            driver.find_element(by=how, value=what)
+        except NoSuchElementException:
+            return False
+        return True
+
+
     def process_request(self, request, spider):
         '''
         如果是知乎url，则接入selenium
@@ -115,38 +123,74 @@ class BaiducrawlerDownloaderMiddleware(object):
             wait = WebDriverWait(br, 20)
             wait2 = WebDriverWait(br, 10)
             br.get(request.url)
-            if br.find_element_by_xpath('.//div[@class="Card Answers-none"]'):
-                return None
+
             try:
-                # js = "var q=document.documentElement.scrollTop=100000"
-                # br.execute_script(js)
-                # time.sleep(2)
-                # inner = wait.until(EC.presence_of_element_located((By.XPATH, './/div[@class="Modal-inner"]')))
-                # self.click_locxy(br, 100, 0)  # 左键点击
-                target = wait.until(EC.presence_of_element_located((By.XPATH, './/div[@class="Pagination"]')))
-                target.location_once_scrolled_into_view
+                if self.is_element_present(br, By.XPATH, './/div[@class="Card Answers-none"]'):
+                    return None
+
+                ans_num = br.find_element_by_xpath('.//h4/span').text
+                s = re.search('([0-9,]+)', ans_num).group(1).replace(',','')
+                if int(s) <= 20:
+                    turl = re.match('(https://www.zhihu.com/question/)(\d+)', request.url)
+                    tu = turl.group(1) + turl.group(2)
+                    br.get(tu)
+                    if self.is_element_present(br, By.XPATH, './/button[@class="Button QuestionAnswers-answerButton Button--blue Button--spread"]'):
+                        pass
+                    else:
+                        '''
+                        如果问题的回答数量少于20，则没有翻页信息，寻找‘写回答’的标签。
+                        如果该问题没有回答，则不提取该页面
+                        '''
+                        js = "var q=document.documentElement.scrollTop=100000"
+                        br.execute_script(js)
+                        time.sleep(2)
+                        inner = wait.until(EC.presence_of_element_located((By.XPATH, './/div[@class="Modal-inner"]')))
+                        self.click_locxy(br, 100, 0)  # 左键点击
+                        js = "var q=document.documentElement.scrollTop=100000"
+                        br.execute_script(js)
+                        time.sleep(2)
+                        target = wait2.until(EC.presence_of_element_located((By.XPATH,
+                                                                             './/button[@class="Button QuestionAnswers-answerButton Button--blue Button--spread"]')))
+                        target.location_once_scrolled_into_view
+                else:
+                    if self.is_element_present(br, By.XPATH, './/div[@class="Pagination"]'):
+                        pass
+                    else:
+                        target = wait.until(EC.presence_of_element_located((By.XPATH, './/div[@class="Pagination"]')))
+                        target.location_once_scrolled_into_view
             except TimeoutException:
-                turl= re.match('(https://www.zhihu.com/question/)(\d+)',request.url)
-                tu=turl.group(1)+turl.group(2)
-                br.get(tu)
-                try:
-                    '''
-                    如果问题的回答数量少于20，则没有翻页信息，寻找‘写回答’的标签。
-                    如果该问题没有回答，则不提取该页面
-                    '''
-                    js = "var q=document.documentElement.scrollTop=100000"
-                    br.execute_script(js)
-                    time.sleep(2)
-                    inner = wait.until(EC.presence_of_element_located((By.XPATH, './/div[@class="Modal-inner"]')))
-                    self.click_locxy(br, 100, 0)  # 左键点击
-                    js = "var q=document.documentElement.scrollTop=100000"
-                    br.execute_script(js)
-                    time.sleep(2)
-                    target = wait2.until(EC.presence_of_element_located((By.XPATH, './/button[@class="Button QuestionAnswers-answerButton Button--blue Button--spread"]')))
-                    target.location_once_scrolled_into_view
-                except TimeoutException:
-                    return HtmlResponse(url=request.url, status=500, request=request)
-            html_str = br.page_source
+                return HtmlResponse(url=request.url, status=500, request=request)
+
+            # try:
+            #     # js = "var q=document.documentElement.scrollTop=100000"
+            #     # br.execute_script(js)
+            #     # time.sleep(2)
+            #     # inner = wait.until(EC.presence_of_element_located((By.XPATH, './/div[@class="Modal-inner"]')))
+            #     # self.click_locxy(br, 100, 0)  # 左键点击
+            #     target = wait.until(EC.presence_of_element_located((By.XPATH, './/div[@class="Pagination"]')))
+            #     target.location_once_scrolled_into_view
+            # except TimeoutException:
+            #     turl= re.match('(https://www.zhihu.com/question/)(\d+)',request.url)
+            #     tu=turl.group(1)+turl.group(2)
+            #     br.get(tu)
+            #     try:
+            #         '''
+            #         如果问题的回答数量少于20，则没有翻页信息，寻找‘写回答’的标签。
+            #         如果该问题没有回答，则不提取该页面
+            #         '''
+            #         js = "var q=document.documentElement.scrollTop=100000"
+            #         br.execute_script(js)
+            #         time.sleep(2)
+            #         inner = wait.until(EC.presence_of_element_located((By.XPATH, './/div[@class="Modal-inner"]')))
+            #         self.click_locxy(br, 100, 0)  # 左键点击
+            #         js = "var q=document.documentElement.scrollTop=100000"
+            #         br.execute_script(js)
+            #         time.sleep(2)
+            #         target = wait2.until(EC.presence_of_element_located((By.XPATH, './/button[@class="Button QuestionAnswers-answerButton Button--blue Button--spread"]')))
+            #         target.location_once_scrolled_into_view
+            #     except TimeoutException:
+            #         return HtmlResponse(url=request.url, status=500, request=request)
+            # html_str = br.page_source
             #br.quit()
             # inner = wait.until(EC.presence_of_element_located((By.XPATH, './/div[@class="Modal-inner"]')))
             # self.click_locxy(br, 100, 0)  # 左键点击

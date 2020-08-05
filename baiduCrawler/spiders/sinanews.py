@@ -9,7 +9,8 @@ import pymongo
 import hashlib
 import os
 import pickle
-
+import sqlite3
+import pymysql
 import logging
 
 class SinanewsSpider(scrapy.Spider):
@@ -31,8 +32,10 @@ class SinanewsSpider(scrapy.Spider):
         },
         'MONGO_URI': '127.0.0.1',
         'MONGO_DB': 'sina_newsSpider',
+        'MYSQL_USERNAME': 'root',
+        'MYSQL_PASSWORD': '150827',
         'ITEM_PIPELINES': {
-            'baiduCrawler.pipelines.BaiducrawlerPipeline': 300,
+            'baiduCrawler.pipelines.SQL3Pipeline': 300,
         },
         # 'BREAKING_POINT': True
     }
@@ -43,6 +46,16 @@ class SinanewsSpider(scrapy.Spider):
     client = pymongo.MongoClient(host=mongo_uri, port=27017)
     db = client[mongo_db]
 
+
+    # username = custom_settings['MYSQL_USERNAME']
+    # password = custom_settings['MYSQL_PASSWORD']
+    # try:
+    #     con = pymysql.connect("localhost", username, password, "NEWSDB", autocommit=1)
+    #     cu = con.cursor()
+    # except:
+    #     con = pymysql.connect("localhost", username, password, autocommit=1)
+    #     cu = con.cursor()
+    #     cu.execute('CREATE DATABASE NEWSDB')
     # page = 2
     # keys = ['电网', '停电']
     base_url = 'https://search.sina.com.cn/?q={}&c=news&from=channel&col=&range=all&source=&country=&size=10&stime=&etime=&time=&dpc=0&a=&ps=0&pf=0&page={}'
@@ -53,10 +66,11 @@ class SinanewsSpider(scrapy.Spider):
     #已访问url
     visited_url = {}
 
-    def __init__(self, keywords=None, pages=1,  *args, **kwargs):
+    def __init__(self, Q=None, keywords=None, pages=1,  *args, **kwargs):
         super(SinanewsSpider, self).__init__(*args, **kwargs)
-        self.keys=keywords.split(',')
+        self.keys=keywords.split(' ')
         self.page = int(pages)
+        self.Q = Q
 
 
     def sinanews_log(self):
@@ -129,8 +143,9 @@ class SinanewsSpider(scrapy.Spider):
         if len(hrefs) < 5 and re_time == 1:
             yield scrapy.Request(response.url, dont_filter=True,
                                  callback=self.parse, meta={"keyword": key, 're_time': 2}, )
-        colItem = sinanewsItem()
-        b_collection = self.db[colItem.collection]
+        # colItem = sinanewsItem()
+        # b_collection = self.db[colItem.collection]
+        # sql = 'SELECT COUNT(*) FROM {} WHERE url=\"{}\" AND keyword=\"{}\"'
         for hre, st in zip(hrefs, scti):
             st = st.strip().split(' ')
             sc = st[0]
@@ -138,15 +153,24 @@ class SinanewsSpider(scrapy.Spider):
             logger.info("【{}】【sub url】:{}, 【start url】:{}".format(key, hre, response.url))
             # hre = self.convert_url(hre)
             #pattern = 'https://baijiahao.baidu.com/'
-            if b_collection.count_documents({'url': hre, 'keyword': key}) != 0:
-                logger.info("【{}去重】【sub url】:{}, 【start url】:{}".format(key, hre, response.url))
-            if b_collection.count_documents({'url': hre, 'keyword': key}) == 0:  ##可能发现重复时前个页面还未解析完，用字典再过滤一遍
-                if hre not in self.visited_url[key]:
-                    self.visited_url[key].append(hre)
-                    print(hre, sc, tm)
-                    yield scrapy.Request(hre, dont_filter=True,
-                                         meta={"keyword": key, "sc": sc, "tm": tm},
-                                         callback=self.parse_sinanews)  ##不同关键词可能有同一问题
+            # try:
+            #     self.cu.execute(sql.format(colItem.collection, hre, key))
+            # except:
+            #     sql2 = "CREATE TABLE IF NOT EXISTS sinanews(keyword TEXT,url TEXT,article_title TEXT, article_source TEXT," \
+            #           "publish_time TEXT, article_text TEXT, spi_date TEXT)"
+            #     self.cu.execute(sql2)
+            #     self.cu.execute(sql.format(colItem.collection, hre, key))
+            # c = self.cu.fetchone()[0]
+
+            # if c != 0:
+            #     logger.info("【{}去重】【sub url】:{}, 【start url】:{}".format(key, hre, response.url))
+            # if c == 0:  ##可能发现重复时前个页面还未解析完，用字典再过滤一遍
+            if hre not in self.visited_url[key]:
+                self.visited_url[key].append(hre)
+                print(hre, sc, tm)
+                yield scrapy.Request(hre, dont_filter=True,
+                                     meta={"keyword": key, "sc": sc, "tm": tm},
+                                     callback=self.parse_sinanews)  ##不同关键词可能有同一问题
 
                     # break
 
@@ -165,6 +189,7 @@ class SinanewsSpider(scrapy.Spider):
         #b_item['author_name'] = html_str.xpath('.//p[@class="author-name"]/text()').extract_first()
         dt = html_str.xpath('.//span[@class="date"]/text()').extract_first()
         b_item['publish_time'] = response.meta.get('tm')
+        b_item['spi_date'] = datetime.date.today().isoformat()
         b_item['article_source'] = response.meta.get('sc')
         try:
             b_item['article_text'] = ''.join([i.strip() for i in html_str.xpath('.//div[@class="article"]/descendant::p//text()').extract()])
@@ -172,11 +197,18 @@ class SinanewsSpider(scrapy.Spider):
                 return
         except:
             return
-        b_collection = self.db[b_item.collection]
-        if b_collection.count_documents({'article_title': b_item['article_title'], 'keyword': keyword}) != 0:
-            logger.info('【title去重】【keyword】: {}, 【news】：{}'.format(keyword, b_item['article_title']))
-            return
-        logger.info('【keyword】: {}, 【add news】：{}'.format(keyword, b_item['article_title']))
-        self.new_news = self.new_news + 1
-        logger.info('【keyword】:{}, 【total new news】:{}'.format(keyword, self.new_news))
+        # b_collection = self.db[b_item.collection]
+        # sql = 'SELECT COUNT(*) FROM {} WHERE article_title=\"{}\" AND keyword=\"{}\"'
+        # self.cu.execute(sql.format(b_item.collection, b_item['article_title'], keyword))
+        # if self.cu.fetchone()[0] != 0:
+        #     logger.info('【title去重】【keyword】: {}, 【news】：{}'.format(keyword, b_item['article_title']))
+        #     return
+        # logger.info('【keyword】: {}, 【add news】：{}'.format(keyword, b_item['article_title']))
+        # self.new_news = self.new_news + 1
+        # logger.info('【keyword】:{}, 【total new news】:{}'.format(keyword, self.new_news))
+        # self.Q.put('【新浪新闻】【关键词】:{}, 【新收集新闻数量】:{}'.format(keyword, self.new_news))
         yield b_item
+
+    # def close(spider, reason):
+    #     spider.Q.put('新浪新闻爬取结束')
+    #     #spider.Q.join()

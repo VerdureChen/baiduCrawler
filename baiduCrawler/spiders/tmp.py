@@ -10,6 +10,8 @@ import pymongo
 import hashlib
 import os
 import pickle
+import  sqlite3
+import pymysql
 
 import logging
 from lxml import etree
@@ -35,18 +37,32 @@ class TmpSpider(scrapy.Spider):
         },
         'MONGO_URI': '127.0.0.1',
         'MONGO_DB': 'zhihuSpider',
+        'MYSQL_USERNAME': 'root',
+        'MYSQL_PASSWORD': '150827',
         'ITEM_PIPELINES': {
-           'baiduCrawler.pipelines.BaiducrawlerPipeline': 300,
+           'baiduCrawler.pipelines.SQL3Pipeline': 300,
         },
         'BREAKING_POINT': True
     }
 
     #连接数据库，对比数据
-    mongo_uri = custom_settings['MONGO_URI']
-    mongo_db = custom_settings['MONGO_DB']
-    client = pymongo.MongoClient(host=mongo_uri, port=27017)
-    db = client[mongo_db]
+    # mongo_uri = custom_settings['MONGO_URI']
+    # mongo_db = custom_settings['MONGO_DB']
+    # client = pymongo.MongoClient(host=mongo_uri, port=27017)
+    # db = client[mongo_db]
 
+    # con = sqlite3.connect("news.sqlite")
+    # cu = con.cursor()
+
+    # username = custom_settings['MYSQL_USERNAME']
+    # password = custom_settings['MYSQL_PASSWORD']
+    # try:
+    #     con = pymysql.connect("localhost", username, password, "NEWSDB", autocommit=1)
+    #     cu = con.cursor()
+    # except:
+    #     con = pymysql.connect("localhost", username, password, autocommit=1)
+    #     cu = con.cursor()
+    #     cu.execute('CREATE DATABASE NEWSDB')
 
     # #设置爬取的百结果度页数
     # page = 2
@@ -87,10 +103,11 @@ class TmpSpider(scrapy.Spider):
     else:
         finish_dic = {}
 
-    def __init__(self, keywords=None, pages=1,  *args, **kwargs):
+    def __init__(self, Q=None, keywords=None, pages=1,  *args, **kwargs):
         super(TmpSpider, self).__init__(*args, **kwargs)
-        self.keys=keywords.split(',')
+        self.keys=keywords.split(' ')
         self.page = int(pages)
+        self.Q = Q
 
     def start_requests(self):
         logger = self.zhi_log()
@@ -200,6 +217,7 @@ class TmpSpider(scrapy.Spider):
         #print("total answer number:", answer_num)
 
         zhiItem = zhihuQuestionItem()
+        zhiItem['spi_date'] = datetime.date.today().isoformat()
         zhiItem['keyword'] = keyword
         zhiItem['question_num'] = question_num
         zhiItem['question_url'] = question_url
@@ -224,31 +242,49 @@ class TmpSpider(scrapy.Spider):
 
         #获取当前爬取知乎页面的页码
         page = response.meta.get('page')
-
+        yield zhiItem
         #问题的集合
-        q_collection = self.db[zhiItem.collection]
-
-        #如果该关键词下这个问题id没有出现过，则作为新问题添加
-        #如果存在，则对比hash值，如果不相等，更新该条数据
-        if q_collection.count_documents({'question_num': question_num, 'keyword': keyword}) == 0:
-            logger.info("【new question】:{}, 【keyword】:{}, 【total answer number】:{}".format(
-                zhiItem['question_text'], zhiItem['keyword'], zhiItem['count_answer']
-            )
-            )
-            self.new_question_count = self.new_question_count+1
-            assert page == 1
-            yield zhiItem
-        else:
-            q_hashs =q_collection.find({'question_num': question_num, 'keyword': keyword})
-            assert q_hashs.count() == 1
-            for q in q_hashs:
-                q_hash = q['question_hash']
-                if q_hash != zhiItem['question_hash']:
-                    logger.info("【update question】:" + zhiItem['question_text']+' 【keyword】:'+zhiItem['keyword'])
-                    q_collection.update({'question_num': question_num, 'keyword': keyword}, zhiItem)
-                    self.update_question_count = self.update_question_count+1
-                else:
-                    pass
+        # q_collection = self.db[zhiItem.collection]
+        #
+        # sql = 'SELECT COUNT(*) FROM {} WHERE question_num=\"{}\" AND keyword=\"{}\"'
+        # try:
+        #     self.cu.execute(sql.format(zhiItem.collection, question_num, keyword))
+        # except:
+        #     sql2 = "CREATE TABLE IF NOT EXISTS zhihuQuestion(keyword TEXT,question_url TEXT,question_text TEXT, question_num TEXT," \
+        #           "question_guanzhu TEXT, question_read TEXT, count_answer TEXT, question_hash TEXT, spi_date TEXT)"
+        #     self.cu.execute(sql2)
+        #     self.cu.execute(sql.format(zhiItem.collection, question_num, keyword))
+        # c = self.cu.fetchone()[0]
+        #
+        # #如果该关键词下这个问题id没有出现过，则作为新问题添加
+        # #如果存在，则对比hash值，如果不相等，更新该条数据
+        # if c == 0:
+        #     logger.info("【new question】:{}, 【keyword】:{}, 【total answer number】:{}".format(
+        #         zhiItem['question_text'], zhiItem['keyword'], zhiItem['count_answer']
+        #     )
+        #     )
+        #     self.new_question_count = self.new_question_count+1
+        #     assert page == 1
+        #     yield zhiItem
+        # else:
+        #     sql3 = "SELECT question_hash FROM {} WHERE question_num=\"{}\" AND keyword=\"{}\""
+        #     q_hashs = self.cu.execute(sql3.format(zhiItem.collection, question_num, keyword))
+        #
+        #     q_hash = q_hashs.fetchone()[0]
+        #     if q_hash != zhiItem['question_hash']:
+        #         logger.info("【update question】:" + zhiItem['question_text']+' 【keyword】:'+zhiItem['keyword'])
+        #         sql4 = 'UPDATE {} SET question_text=\"{}\", question_guanzhu=\"{}\", question_read=\"{}\", ' \
+        #                'count_answer=\"{}\", question_hash=\"{}\", spi_date=\"{}\" ' \
+        #                'WHERE question_num=\"{}\" AND keyword=\"{}\"'.format(zhiItem.collection, zhiItem['question_text'],
+        #                                                                      zhiItem['question_guanzhu'], zhiItem['question_read'],
+        #                                                                      zhiItem['count_answer'],
+        #                                                                      zhiItem['question_hash'], zhiItem['spi_date'],
+        #                                                                      zhiItem['question_num'], zhiItem['keyword'])
+        #         self.cu.execute(sql4)
+        #         self.con.commit()
+        #         self.update_question_count = self.update_question_count+1
+        #     else:
+        #         pass
 
 
         #对答案进行解析
@@ -259,6 +295,7 @@ class TmpSpider(scrapy.Spider):
         for answer in answers:
             item = BaiducrawlerItem()
             item['keyword']= keyword
+            item['spi_date'] = datetime.date.today().isoformat()
             item['question_num'] = question_num
             item['question_url'] = question_url
             item['question_text'] = question_text
@@ -281,7 +318,7 @@ class TmpSpider(scrapy.Spider):
             elif re.search('昨天', time):
                 time = (datetime.date.today() + datetime.timedelta(days=-1)).strftime('%Y-%m-%d')
             else:
-                time = 'ukn'
+                time = 'NULL'
                 logger.info("【timeError】:"+item['answer_url'])
 
             item['answer_time'] = time
@@ -308,7 +345,7 @@ class TmpSpider(scrapy.Spider):
                     item['dianzan_num'] = re.search('([0-9]+)', zan).group(1)
                 except:
                     logger.info("【refineAnswer】:"+item['answer_url'])
-                    item['dianzan_num'] = 'ukn'
+                    item['dianzan_num'] = 'NULL'
 
             #对评论数量进行提取
             comment = answer.xpath('./div[2]/div[3]/button[1]/text()').extract_first()
@@ -325,38 +362,69 @@ class TmpSpider(scrapy.Spider):
                         item['comment_num'] = cnum
                     except:
                         logger.info("【commentError】"+item['answer_url'])
-                        item['comment_num'] = 'ukn'
+                        item['comment_num'] = 'NULL'
 
             #计算回答信息的hash值
             hsh_txt = item['keyword']+item['question_num']+item['question_text']+item['answer_name']+item['answer_time']+item['dianzan_num']+item['comment_num']
             md5_2 = hashlib.md5()
             md5_2.update(hsh_txt.encode('utf-8'))
             item['answer_hash'] = md5_2.hexdigest()
-
-            #回答的集合
-            a_collection = self.db[item.collection]
-            if a_collection.count_documents({'answer_url': item['answer_url'], 'keyword': keyword}) == 0:
-                self.new_answer_count = self.new_answer_count + 1
-                yield item
-            else:
-                a_hashs = a_collection.find({'answer_url': item['answer_url'], 'keyword': keyword})
-                assert a_hashs.count() == 1
-                for a in a_hashs:
-                    a_hash = a['answer_hash']
-                    if a_hash != item['answer_hash']:
-                        a_collection.update({'answer_url': item['answer_url'], 'keyword': keyword}, item)
-                        self.update_answer_count = self.update_answer_count + 1
-                    else:
-                        pass
+            yield item
+            # #回答的集合
+            # a_collection = self.db[item.collection]
+            #
+            # sql = 'SELECT COUNT(*) FROM {} WHERE answer_url=\"{}\" AND keyword=\"{}\"'
+            # try:
+            #     self.cu.execute(sql.format(item.collection, item['answer_url'], keyword))
+            # except:
+            #     sql2 = "CREATE TABLE IF NOT EXISTS zhihu(keyword TEXT,question_url TEXT,question_text TEXT, question_num TEXT," \
+            #           "answer_name TEXT, answer_url TEXT, answer_time TEXT, answer_text TEXT, dianzan_num TEXT, comment_num TEXT," \
+            #           "answer_hash TEXT, spi_date TEXT)"
+            #     self.cu.execute(sql2)
+            #     self.cu.execute(sql.format(item.collection, item['answer_url'], keyword))
+            # c = self.cu.fetchone()[0]
+            #
+            # if c == 0:
+            #     self.new_answer_count = self.new_answer_count + 1
+            #     yield item
+            # else:
+            #     sql3 = "SELECT answer_hash FROM {} WHERE answer_url=\"{}\" AND keyword=\"{}\""
+            #     a_hashs = self.cu.execute(sql3.format(item.collection, item['answer_url'], keyword))
+            #
+            #     a_hash = a_hashs.fetchone()[0]
+            #
+            #     if a_hash != item['answer_hash']:
+            #         sql4 = 'UPDATE {} SET question_text=\"{}\", question_num=\"{}\", answer_name=\"{}\", ' \
+            #                'answer_time=\"{}\", answer_hash=\"{}\", dianzan_num=\"{}\", spi_date=\"{}\" , comment_num=\"{}\"' \
+            #                'WHERE question_num=\"{}\" AND keyword=\"{}\"'.format(item.collection,
+            #                                                                      item['question_text'],
+            #                                                                      item['question_num'],
+            #                                                                      item['answer_name'],
+            #                                                                      item['answer_time'],
+            #                                                                      item['answer_hash'],
+            #                                                                      item['dianzan_num'],
+            #                                                                      item['spi_date'],
+            #                                                                      item['comment_num'],
+            #                                                                      item['question_num'],
+            #                                                                      item['keyword'])
+            #         self.cu.execute(sql4)
+            #         self.con.commit()
+            #         #a_collection.update({'answer_url': item['answer_url'], 'keyword': keyword}, item)
+            #         self.update_answer_count = self.update_answer_count + 1
+            #     else:
+            #         pass
 
 
         #每解析完一页，记录新增和更新信息
         logger.info(
-            '【question number】:{}, 【page】:{}, 【total_newQ】:{}, 【total_upQ】:{}, 【total_newA】:{}, 【total_upA】:{}'.format(
-                zhiItem['question_num'], page, self.new_question_count,
-                self.update_question_count, self.new_answer_count, self.update_answer_count
+            '【question number】:{}, 【page】:{}, finish!'.format(
+                zhiItem['question_num'], page
             )
         )
+
+        # self.Q.put('【收集新问题】:{}, 【更新问题】:{}, 【收集新回答】:{}, 【更新回答】:{}'.format(
+        #         self.new_question_count,
+        #         self.update_question_count, self.new_answer_count, self.update_answer_count))
 
         if self.from_breakingPoint:
             f = open(self.finish_file_path, 'wb')
@@ -404,3 +472,7 @@ class TmpSpider(scrapy.Spider):
             logger.addHandler(fh)
             logger.addHandler(ch)
         return logger  # 直接返回logger
+
+    # def close(spider, reason):
+    #     spider.Q.put('知乎问答爬取结束')
+    #     #spider.Q.join()

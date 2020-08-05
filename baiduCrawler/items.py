@@ -27,6 +27,7 @@ class BaiducrawlerItem(scrapy.Item):
     dianzan_num = Field()
     comment_num = Field()
     answer_hash = Field()
+    spi_date = Field()
     # count_answer = Field()
 
 class zhihuQuestionItem(scrapy.Item):
@@ -42,6 +43,7 @@ class zhihuQuestionItem(scrapy.Item):
     question_read = Field()
     count_answer = Field()
     question_hash = Field()
+    spi_date = Field()
 
 class baijiahaoItem(scrapy.Item):
     '''
@@ -55,6 +57,7 @@ class baijiahaoItem(scrapy.Item):
     publish_time = Field()
     account_authentication = Field()
     article_text = Field()
+    spi_date = Field()
 
 
 class sinanewsItem(scrapy.Item):
@@ -69,3 +72,4 @@ class sinanewsItem(scrapy.Item):
     publish_time = Field()
     #account_authentication = Field()
     article_text = Field()
+    spi_date = Field()

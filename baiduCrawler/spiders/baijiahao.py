@@ -8,7 +8,9 @@ from ..items import baijiahaoItem
 import pymongo
 import hashlib
 import os
+import sqlite3
 import pickle
+import pymysql
 
 import logging
 
@@ -31,8 +33,10 @@ class BaijiahaoSpider(scrapy.Spider):
         },
         'MONGO_URI': '127.0.0.1',
         'MONGO_DB': 'baijiahaoSpider',
+        'MYSQL_USERNAME': 'root',
+        'MYSQL_PASSWORD': '150827',
         'ITEM_PIPELINES': {
-            'baiduCrawler.pipelines.BaiducrawlerPipeline': 300,
+            'baiduCrawler.pipelines.SQL3Pipeline': 300,
         },
         # 'BREAKING_POINT': True
     }
@@ -43,6 +47,21 @@ class BaijiahaoSpider(scrapy.Spider):
     client = pymongo.MongoClient(host=mongo_uri, port=27017)
     db = client[mongo_db]
 
+    # con = sqlite3.connect("news.sqlite")
+    # cu = con.cursor()
+
+    # username = custom_settings['MYSQL_USERNAME']
+    # password = custom_settings['MYSQL_PASSWORD']
+    # try:
+    #     con = pymysql.connect("localhost", username, password, "NEWSDB", autocommit=1)
+    #     cu = con.cursor()
+    #     con.commit()
+    # except:
+    #     con = pymysql.connect("localhost", username, password, autocommit=1)
+    #     cu = con.cursor()
+    #     cu.execute('CREATE DATABASE NEWSDB')
+    #     con.commit()
+
     # page = 2
     # keys = ['电网', '停电']
     base_url = 'https://www.baidu.com/s?medium=2&tn=news&word={}&pn={}'
@@ -50,10 +69,11 @@ class BaijiahaoSpider(scrapy.Spider):
     # 更新的新闻数量
     new_news = 0
 
-    def __init__(self, keywords=None, pages=1,  *args, **kwargs):
+    def __init__(self, Q=None, keywords=None, pages=1,  *args, **kwargs):
         super(BaijiahaoSpider, self).__init__(*args, **kwargs)
-        self.keys=keywords.split(',')
+        self.keys=keywords.split(' ')
         self.page = int(pages)
+        self.Q = Q
 
     def baijiahao_log(self):
         '''
@@ -123,20 +143,34 @@ class BaijiahaoSpider(scrapy.Spider):
         if len(hrefs) < 5 and re_time == 1:
             yield scrapy.Request(response.url, dont_filter=True,
                                  callback=self.parse, meta={"keyword": key, 're_time': 2}, )
-        colItem = baijiahaoItem()
-        b_collection = self.db[colItem.collection]
+        # colItem = baijiahaoItem()
+        # b_collection = self.db[colItem.collection]
+        # sql = 'SELECT COUNT(*) FROM {} WHERE url=\"{}\" AND keyword=\"{}\";'
         for hre in hrefs:
             logger.info("【{}】【sub url】:{}, 【start url】:{}".format(key, hre, response.url))
             # hre = self.convert_url(hre)
             pattern = 'https://baijiahao.baidu.com/'
-            if b_collection.count_documents({'url': hre, 'keyword': key}) == 0 and re.match(pattern, hre) != None:
-                self.new_news = self.new_news + 1
 
+            # try:
+            #     self.cu.execute(sql.format(colItem.collection, hre, key))
+            #     self.con.commit()
+            #     c = self.cu.fetchone()[0]
+            # except:
+            #     sql2 = "CREATE TABLE IF NOT EXISTS baijiahao(keyword TEXT,url TEXT,article_title TEXT, author_name TEXT," \
+            #           "publish_time TEXT, account_authentication TEXT, article_text TEXT, spi_date TEXT)"
+            #     self.cu.execute(sql2)
+            #     self.con.commit()
+            #     self.cu.execute(sql.format(colItem.collection, hre, key))
+            #     self.con.commit()
+            #     c = self.cu.fetchone()[0]
+
+            # logger.info("去重"+str(c)+'  '+sql.format(colItem.collection, hre, key))
+            if re.match(pattern, hre) != None:
                 yield scrapy.Request(hre, dont_filter=True,
                                      meta={"keyword": key},
                                      callback=self.parse_baijiahao)  ##不同关键词可能有同一问题
                 # break
-        logger.info('【keyword】:{}, 【total new news】:{}'.format(key, self.new_news))
+
         # print('parse finish')
 
     def parse_baijiahao(self, response):
@@ -157,12 +191,20 @@ class BaijiahaoSpider(scrapy.Spider):
             elif re.search('([0-9]+-[0-9]+)', dt):
                 dt = str(datetime.datetime.now().year) + '-' + re.search('([0-9]+-[0-9]+)', dt).group(1)
             else:
-                dt = 'unk'
+                dt = 'NULL'
         except:
-            dt = 'unk'
+            dt = 'NULL'
         b_item['publish_time'] = dt
+        b_item['spi_date'] = datetime.date.today().isoformat()
         b_item['account_authentication'] = html_str.xpath(
             './/span[@class="account-authentication"]/text()').extract_first()
         b_item['article_text'] = ''.join(html_str.xpath('.//span[@class="bjh-p"]/text()').extract()).strip()
-        logger.info('【keyword】: {}, 【add news】：{}'.format(keyword, b_item['article_title']))
+        # logger.info('【keyword】: {}, 【add news】：{}'.format(keyword, b_item['article_title']))
+        # self.new_news = self.new_news + 1
+        # logger.info('【keyword】:{}, 【total new news】:{}'.format(keyword, self.new_news))
+        # self.Q.put('【百度资讯】【关键词】:{}, 【新收集新闻数量】:{}'.format(keyword, self.new_news))
         yield b_item
+
+    # def close(spider, reason):
+    #     spider.Q.put('百度百家号爬取结束')
+    #     #spider.Q.join()
