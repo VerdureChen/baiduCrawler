@@ -37,8 +37,6 @@ class TmpSpider(scrapy.Spider):
         },
         'MONGO_URI': '127.0.0.1',
         'MONGO_DB': 'zhihuSpider',
-        'MYSQL_USERNAME': 'root',
-        'MYSQL_PASSWORD': '150827',
         'ITEM_PIPELINES': {
            'baiduCrawler.pipelines.SQL3Pipeline': 300,
         },
@@ -219,22 +217,22 @@ class TmpSpider(scrapy.Spider):
         zhiItem = zhihuQuestionItem()
         zhiItem['spi_date'] = datetime.date.today().isoformat()
         zhiItem['keyword'] = keyword
-        zhiItem['question_num'] = question_num
+        zhiItem['question_num'] = int(question_num)
         zhiItem['question_url'] = question_url
         zhiItem['question_text'] = question_text
-        zhiItem['question_guanzhu'] = question_guanzhu
-        zhiItem['question_read'] = question_read
-        zhiItem['count_answer'] = re.search('([0-9,]+)', answer_num).group(1)
+        zhiItem['question_guanzhu'] = int(question_guanzhu)
+        zhiItem['question_read'] = int(question_read)
+        zhiItem['count_answer'] = int(re.search('([0-9,]+)', answer_num).group(1).replace(',',''))
         #计算问题各项属性的hash值，判断是否需要更新数据
         try:
-            hash_text = zhiItem['keyword'] + zhiItem['question_num'] + zhiItem['question_text'] + zhiItem['question_guanzhu'] + zhiItem['question_read'] + zhiItem['count_answer']
+            hash_text = zhiItem['keyword'] + str(zhiItem['question_num']) + zhiItem['question_text'] + str(zhiItem['question_guanzhu']) + str(zhiItem['question_read']) + str(zhiItem['count_answer'])
         except:
             hash_text = ''
-            for k, v in dict(zhiItem):
+            for k, v in dict(zhiItem).items():
                 if v is None:
                     logger.error('【valueError】：{}:{} in {}'.format(k, v, zhiItem['question_num']))
                 else:
-                    hash_text = hash_text+zhiItem[k]
+                    hash_text = hash_text+str(zhiItem[k])
 
         md5 = hashlib.md5()
         md5.update(hash_text.encode('utf-8'))
@@ -296,7 +294,7 @@ class TmpSpider(scrapy.Spider):
             item = BaiducrawlerItem()
             item['keyword']= keyword
             item['spi_date'] = datetime.date.today().isoformat()
-            item['question_num'] = question_num
+            item['question_num'] = int(question_num)
             item['question_url'] = question_url
             item['question_text'] = question_text
             item['answer_name'] = answer.xpath('./div[1]/div/meta[@itemprop="name"]/@content').extract_first()
@@ -318,7 +316,7 @@ class TmpSpider(scrapy.Spider):
             elif re.search('昨天', time):
                 time = (datetime.date.today() + datetime.timedelta(days=-1)).strftime('%Y-%m-%d')
             else:
-                time = 'NULL'
+                #time = 'NULL'
                 logger.info("【timeError】:"+item['answer_url'])
 
             item['answer_time'] = time
@@ -336,36 +334,47 @@ class TmpSpider(scrapy.Spider):
                 if "万" in zan:
                     z = re.search('([0-9/.]+)', zan).group(1)
                     z =int(z) * 10000
-                    item['dianzan_num'] = str(z)
+                    item['dianzan_num'] = z
                 else:
-                    item['dianzan_num'] = re.search('([0-9]+)', zan).group(1)
+                    item['dianzan_num'] = int(re.search('([0-9,]+)', zan).group(1).replace(',',''))
             except:
                 try:
                     zan = answer.xpath('./div[2]/div[3]/div/span/button[1]/@aria-label').extract_first()
-                    item['dianzan_num'] = re.search('([0-9]+)', zan).group(1)
+                    item['dianzan_num'] = int(re.search('([0-9,]+)', zan).group(1).replace(',',''))
                 except:
                     logger.info("【refineAnswer】:"+item['answer_url'])
-                    item['dianzan_num'] = 'NULL'
+                    #item['dianzan_num'] = 'NULL'
 
             #对评论数量进行提取
             comment = answer.xpath('./div[2]/div[3]/button[1]/text()').extract_first()
             if comment=="添加评论":
-                item['comment_num'] = '0'
+                item['comment_num'] = 0
             else:
                 try:
-                    cnum=re.search('([0-9]+)', comment).group(1)
-                    item['comment_num'] = cnum
+                    cnum=re.search('([0-9,]+)', comment).group(1).replace(',','')
+                    item['comment_num'] = int(cnum)
                 except:
                     try:
                         comment = answer.xpath('./div[2]/div[3]/div/button[1]/text()').extract_first()
-                        cnum = re.search('([0-9]+)', comment).group(1)
-                        item['comment_num'] = cnum
+                        cnum = re.search('([0-9,]+)', comment).group(1).replace(',','')
+                        item['comment_num'] = int(cnum)
                     except:
                         logger.info("【commentError】"+item['answer_url'])
-                        item['comment_num'] = 'NULL'
+                        #item['comment_num'] = 'NULL'
 
             #计算回答信息的hash值
-            hsh_txt = item['keyword']+item['question_num']+item['question_text']+item['answer_name']+item['answer_time']+item['dianzan_num']+item['comment_num']
+            try:
+                hsh_txt = item['keyword']+str(item['question_num'])+item['question_text']+item['answer_name']\
+                          +item['answer_time']+str(item['dianzan_num'])+str(item['comment_num'])
+            except:
+                hsh_text = ''
+                for k, v in dict(item).items():
+                    if v is None:
+                        logger.error('【valueError】：{}:{} in {}'.format(k, v, item['question_num']))
+                    else:
+                        hsh_text = hsh_text + str(item[k])
+
+
             md5_2 = hashlib.md5()
             md5_2.update(hsh_txt.encode('utf-8'))
             item['answer_hash'] = md5_2.hexdigest()

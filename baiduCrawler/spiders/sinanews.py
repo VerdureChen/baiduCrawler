@@ -32,8 +32,6 @@ class SinanewsSpider(scrapy.Spider):
         },
         'MONGO_URI': '127.0.0.1',
         'MONGO_DB': 'sina_newsSpider',
-        'MYSQL_USERNAME': 'root',
-        'MYSQL_PASSWORD': '150827',
         'ITEM_PIPELINES': {
             'baiduCrawler.pipelines.SQL3Pipeline': 300,
         },

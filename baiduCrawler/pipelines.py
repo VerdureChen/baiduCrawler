@@ -38,9 +38,11 @@ class BaiducrawlerPipeline(object):
 
 
 class SQL3Pipeline(object):
-    def __init__(self, username, password, Q):
+    def __init__(self, username, password, Q, dbname, hostname):
         self.username = username
         self.password = password
+        self.dbname = dbname
+        self.hostname = hostname
         self.new_question_count = 0
         self.update_question_count = 0
         self.new_answer_count = 0
@@ -74,18 +76,18 @@ class SQL3Pipeline(object):
     @classmethod
     def from_crawler(cls, crawler):
         return cls(username=crawler.settings.get('MYSQL_USERNAME'), password=crawler.settings.get('MYSQL_PASSWORD'),
-                   Q=crawler.spider.Q)
+                   Q=crawler.spider.Q, dbname=crawler.settings.get('DBNAME'), hostname=crawler.settings.get('HOSTNAME'))
 
     def open_spider(self,spider):
         # self.con = sqlite3.connect("news.sqlite")
         # self.cu = self.con.cursor()
         try:
-            self.con = pymysql.connect("localhost",self.username, self.password, "NEWSDB", charset='utf8', autocommit=1)
+            self.con = pymysql.connect(self.hostname, self.username, self.password, self.dbname, charset='utf8', autocommit=1)
             self.cu = self.con.cursor()
         except:
-            self.con = pymysql.connect("localhost", self.username, self.password, charset='utf8', autocommit=1)
+            self.con = pymysql.connect(self.hostname, self.username, self.password, charset='utf8', autocommit=1)
             self.cu = self.con.cursor()
-            self.cu.execute('CREATE DATABASE NEWSDB')
+            self.cu.execute('CREATE DATABASE {}'.format(self.dbname))
 
     def baijiahao_insert(self, item):
         sql = 'SELECT COUNT(*) FROM {} WHERE url=\"{}\" AND keyword=\"{}\";'
@@ -100,7 +102,8 @@ class SQL3Pipeline(object):
             insert_sql = "insert into {0}({1}) values ({2})".format(item.collection,
                                                                     ','.join(item.fields.keys()),
                                                                     ','.join(['%s'] * len(item.fields.keys())))
-            self.cu.execute(insert_sql, tuple([item[k] if item[k] is not None else 'NULL'for k in item.fields.keys()]))
+            #self.cu.execute(insert_sql, tuple([item[k] if item[k] is not None else 'NULL'for k in item.fields.keys()]))
+            self.cu.execute(insert_sql, tuple([item[k] for k in item.fields.keys()]))
             self.con.commit()
             self.new_bai_news = self.new_bai_news + 1
             self.bai_logger.info('【keyword】: {}, 【add news】：{}'.format(item['keyword'], item['article_title']))
@@ -123,7 +126,8 @@ class SQL3Pipeline(object):
             insert_sql = "insert into {0}({1}) values ({2})".format(item.collection,
                                                                     ','.join(item.fields.keys()),
                                                                     ','.join(['%s'] * len(item.fields.keys())))
-            self.cu.execute(insert_sql, tuple([item[k] if item[k] is not None else 'NULL'for k in item.fields.keys()]))
+            #self.cu.execute(insert_sql, tuple([item[k] if item[k] is not None else 'NULL'for k in item.fields.keys()]))
+            self.cu.execute(insert_sql, tuple([item[k] for k in item.fields.keys()]))
             print('【insert sql】: ', insert_sql, ' ', tuple([item[k] if item[k] is not None else 'NULL'for k in item.fields.keys()]))
             self.con.commit()
             self.new_sina_news = self.new_sina_news + 1
@@ -149,7 +153,8 @@ class SQL3Pipeline(object):
                                                                     ','.join(item.fields.keys()),
                                                                     ','.join(['%s'] * len(item.fields.keys())))
             self.con.commit()
-            self.cu.execute(insert_sql, tuple([item[k] if item[k] is not None else 'NULL'for k in item.fields.keys()]))
+            #self.cu.execute(insert_sql, tuple([item[k] if item[k] is not None else 'NULL'for k in item.fields.keys()]))
+            self.cu.execute(insert_sql, tuple([item[k] for k in item.fields.keys()]))
         else:
             sql3 = "SELECT question_hash FROM {} WHERE question_num=\"{}\" AND keyword=\"{}\""
             self.cu.execute(sql3.format(item.collection, item['question_num'], item['keyword']))
@@ -190,7 +195,8 @@ class SQL3Pipeline(object):
             insert_sql = "insert into {0}({1}) values ({2})".format(item.collection,
                                                                     ','.join(item.fields.keys()),
                                                                     ','.join(['%s'] * len(item.fields.keys())))
-            self.cu.execute(insert_sql, tuple([item[k] if item[k] is not None else 'NULL'for k in item.fields.keys()]))
+            #self.cu.execute(insert_sql, tuple([item[k] if item[k] is not None else 'null'for k in item.fields.keys()]))
+            self.cu.execute(insert_sql, tuple([item[k] for k in item.fields.keys()]))
             self.con.commit()
 
         else:
@@ -267,16 +273,16 @@ class SQL3Pipeline(object):
                 self.baijiahao_insert(item)
 
             elif item.collection == 'zhihu':
-                sql = "CREATE TABLE IF NOT EXISTS zhihu(keyword TEXT,question_url TEXT,question_text TEXT, question_num TEXT," \
-                      "answer_name TEXT, answer_url TEXT, answer_time TEXT, answer_text TEXT, dianzan_num TEXT, comment_num TEXT," \
+                sql = "CREATE TABLE IF NOT EXISTS zhihu(keyword TEXT,question_url TEXT,question_text TEXT, question_num INTEGER ," \
+                      "answer_name TEXT, answer_url TEXT, answer_time TEXT, answer_text TEXT, dianzan_num INTEGER , comment_num INTEGER ," \
                       "answer_hash TEXT, spi_date TEXT)"
                 self.cu.execute(sql)
                 self.con.commit()
                 self.zhihu_insert(item)
 
             elif item.collection == 'zhihuQuestion':
-                sql = "CREATE TABLE IF NOT EXISTS zhihuQuestion(keyword TEXT,question_url TEXT,question_text TEXT, question_num TEXT," \
-                      "question_guanzhu TEXT, question_read TEXT, count_answer TEXT, question_hash TEXT, spi_date TEXT)"
+                sql = "CREATE TABLE IF NOT EXISTS zhihuQuestion(keyword TEXT,question_url TEXT,question_text TEXT, question_num INTEGER ," \
+                      "question_guanzhu INTEGER , question_read INTEGER , count_answer INTEGER , question_hash TEXT, spi_date TEXT)"
                 self.cu.execute(sql)
                 self.con.commit()
                 self.zhihuQuestion_insert(item)
