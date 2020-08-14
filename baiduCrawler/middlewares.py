@@ -16,6 +16,9 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.action_chains import ActionChains
 from scrapy.http import HtmlResponse
 import time
+import sys
+import os
+import zipfile
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class BaiducrawlerSpiderMiddleware(object):
@@ -92,6 +95,16 @@ class BaiducrawlerDownloaderMiddleware(object):
             return False
         return True
 
+    def res_path(self, relative_path):
+        """获取资源绝对路径"""
+        try:
+            base_path = sys._MEIPASS
+        except Exception:
+            base_path = os.path.abspath(".")
+
+        return os.path.join(base_path, relative_path)
+
+
 
     def process_request(self, request, spider):
         '''
@@ -114,12 +127,22 @@ class BaiducrawlerDownloaderMiddleware(object):
         elif re.match('(https://www.zhihu.com/question/)(\d+)', request.url):
             # desired_capabilities = DesiredCapabilities.CHROME
             # desired_capabilities["pageLoadStrategy"] = "none"
+
+            if not os.path.exists(self.res_path('chrome-win')):
+                # 先将zip压缩文件进行解压
+                chrome_zip = zipfile.ZipFile(self.res_path('baiduCrawler/chrome-win.zip'))
+                chrome_zip.extractall(self.res_path('./'))
+
+
             option = webdriver.ChromeOptions()
             option.add_argument('headless')
             option.add_argument('log-level=1')
             prefs = {'profile.managed_default_content_settings.images': 2}
             option.add_experimental_option('prefs', prefs)
-            br = webdriver.Chrome(chrome_options=option)
+
+            option.binary_location = self.res_path('chrome-win/chrome.exe')
+            driver_path = self.res_path('baiduCrawler/chromedriver.exe')
+            br = webdriver.Chrome(executable_path=driver_path, chrome_options=option)
             wait = WebDriverWait(br, 20)
             wait2 = WebDriverWait(br, 10)
             br.get(request.url)

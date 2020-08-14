@@ -1,9 +1,12 @@
+from multiprocessing import freeze_support
+freeze_support()
 import sys
+from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtSql import QSqlDatabase, QSqlTableModel, QSqlQueryModel, QSqlQuery
 from PyQt5.QtWidgets import QApplication, QMessageBox, QTableView, QWidget, QLabel, QVBoxLayout, QHBoxLayout, \
     QHeaderView, QLineEdit, QPushButton, QCheckBox, QGridLayout, QComboBox, QTabWidget, QSpinBox, QSplitter, QDialog,\
-    QDialogButtonBox
+    QDialogButtonBox, QSplashScreen
 from PyQt5.QtCore import QThread, pyqtSignal, QFile, QTextStream
 from baiduCrawler.spiders.tmp import TmpSpider
 from baiduCrawler.spiders.baijiahao import  BaijiahaoSpider
@@ -17,6 +20,70 @@ import logging
 import os
 import configparser
 import pymysql
+import crawl
+import scrapy.spiderloader
+import scrapy.statscollectors
+import scrapy.logformatter
+import scrapy.dupefilters
+import scrapy.squeues
+
+import scrapy.extensions.spiderstate
+import scrapy.extensions.corestats
+import scrapy.extensions.telnet
+import scrapy.extensions.logstats
+import scrapy.extensions.memusage
+import scrapy.extensions.memdebug
+import scrapy.extensions.feedexport
+import scrapy.extensions.closespider
+import scrapy.extensions.debug
+import scrapy.extensions.httpcache
+import scrapy.extensions.statsmailer
+import scrapy.extensions.throttle
+import scrapy.downloadermiddlewares.chunked
+import scrapy.core.scheduler
+import scrapy.core.engine
+import scrapy.core.scraper
+import scrapy.core.spidermw
+import scrapy.core.downloader
+import selenium
+import scrapy.downloadermiddlewares.stats
+import scrapy.downloadermiddlewares.httpcache
+import scrapy.downloadermiddlewares.cookies
+import scrapy.downloadermiddlewares.useragent
+import scrapy.downloadermiddlewares.httpproxy
+import scrapy.downloadermiddlewares.ajaxcrawl
+import scrapy.downloadermiddlewares.chunked
+import scrapy.downloadermiddlewares.decompression
+import scrapy.downloadermiddlewares.defaultheaders
+import scrapy.downloadermiddlewares.downloadtimeout
+import scrapy.downloadermiddlewares.httpauth
+import scrapy.downloadermiddlewares.httpcompression
+import scrapy.downloadermiddlewares.redirect
+import scrapy.downloadermiddlewares.retry
+import scrapy.downloadermiddlewares.robotstxt
+
+import scrapy.spidermiddlewares.depth
+import scrapy.spidermiddlewares.httperror
+import scrapy.spidermiddlewares.offsite
+import scrapy.spidermiddlewares.referer
+import scrapy.spidermiddlewares.urllength
+
+import scrapy.pipelines
+
+import scrapy.core.downloader.handlers.http
+import scrapy.core.downloader.contextfactory
+from scrapy import signals
+import re
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import TimeoutException, NoSuchElementException
+from selenium.webdriver.common.action_chains import ActionChains
+from scrapy.http import HtmlResponse
+import time
+import zipfile
 
 class LogThread(QThread):
 
@@ -89,18 +156,18 @@ class LogThread(QThread):
             self.msleep(10)
 
 
-def crawl(Q, spider_list, keyword, pages, hostname, dbname, username, password):
-    # CrawlerProcess
-    s = get_project_settings()
-    s['MYSQL_USERNAME'] = username
-    s['MYSQL_PASSWORD'] = password
-    s['HOSTNAME'] = hostname
-    s['DBNAME'] = dbname
-    process = CrawlerProcess(s)
-    #Q.clear()
-    for spi in spider_list:
-        process.crawl(spi, Q=Q, keywords=keyword, pages=pages)
-    process.start()
+# def crawl(Q, spider_list, keyword, pages, hostname, dbname, username, password):
+#     # CrawlerProcess
+#     s = get_project_settings()
+#     s['MYSQL_USERNAME'] = username
+#     s['MYSQL_PASSWORD'] = password
+#     s['HOSTNAME'] = hostname
+#     s['DBNAME'] = dbname
+#     process = CrawlerProcess(s)
+#     #Q.clear()
+#     for spi in spider_list:
+#         process.crawl(spi, Q=Q, keywords=keyword, pages=pages)
+#     process.start()
 
 
 class Dialog(QDialog):
@@ -214,7 +281,7 @@ class Demo(QWidget):
         #self.crawl_thread = CrawlThread(self)
         self.TB = QTabWidget(self)
         self.table_init()
-
+        self.setWindowIcon(QIcon(res_path('icon2.ico')))
 
 
 
@@ -614,7 +681,7 @@ class Demo(QWidget):
                 self.label6.setText("新浪新闻收集器")
                 self.label_sina_finish.setText("正在收集")
             pages = self.spinbox.value()
-            self.p = Process(target=crawl, args=(self.Q, self.spider_list, keyword, pages, self.hostname, self.dbname, self.username, self.pwd))
+            self.p = Process(target=crawl.crawl, args=(self.Q, self.spider_list, keyword, pages, self.hostname, self.dbname, self.username, self.pwd))
             # self.spider_list=[]
             self.p.start()
             #self.p.join()
@@ -636,11 +703,23 @@ class Demo(QWidget):
             # self.sql_exec()
             self.st.setText("开始")
 
+def res_path(relative_path):
+    """获取资源绝对路径"""
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
 
+    return os.path.join(base_path, relative_path)
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    splash = QSplashScreen()
+    splash.setPixmap(QPixmap(res_path('start2.png')))
+    splash.show()
+    splash.showMessage('Welcome to use Jisi!', Qt.AlignBottom | Qt.AlignCenter, Qt.darkYellow)
     demo = Demo()
     demo.show()
+    splash.finish(demo)
     sys.exit(app.exec_())

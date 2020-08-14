@@ -137,7 +137,7 @@ class BaijiahaoSpider(scrapy.Spider):
         key = response.meta.get('keyword')
         re_time = response.meta.get('re_time')
         logger.info("【{}】【start url】:{}".format(key, response.url))
-        hrefs = response.xpath(".//div[@id='content_left']/div/div[@class='result']/h3/a/@href").extract()
+        hrefs = response.xpath(".//div[@id='content_left']/div/div[@class='result old-pmd']/h3/a/@href").extract()
         if len(hrefs) < 5 and re_time == 1:
             yield scrapy.Request(response.url, dont_filter=True,
                                  callback=self.parse, meta={"keyword": key, 're_time': 2}, )
@@ -164,6 +164,7 @@ class BaijiahaoSpider(scrapy.Spider):
 
             # logger.info("去重"+str(c)+'  '+sql.format(colItem.collection, hre, key))
             if re.match(pattern, hre) != None:
+                #print('-----------------------------------------------')
                 yield scrapy.Request(hre, dont_filter=True,
                                      meta={"keyword": key},
                                      callback=self.parse_baijiahao)  ##不同关键词可能有同一问题
@@ -172,6 +173,7 @@ class BaijiahaoSpider(scrapy.Spider):
         # print('parse finish')
 
     def parse_baijiahao(self, response):
+        #print('+++++++++++++++++++++++++++++++++++++++++++++')
         logger = self.baijiahao_log()
         html_str = response
 
