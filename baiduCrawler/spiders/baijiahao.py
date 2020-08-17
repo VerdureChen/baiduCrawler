@@ -137,7 +137,7 @@ class BaijiahaoSpider(scrapy.Spider):
         key = response.meta.get('keyword')
         re_time = response.meta.get('re_time')
         logger.info("【{}】【start url】:{}".format(key, response.url))
-        hrefs = response.xpath(".//div[@id='content_left']/div/div[@class='result old-pmd']/h3/a/@href").extract()
+        hrefs = response.xpath(".//div[@id='content_left']/div/div[@class='result-op c-container xpath-log new-pmd']/div/h3/a/@href").extract()
         if len(hrefs) < 5 and re_time == 1:
             yield scrapy.Request(response.url, dont_filter=True,
                                  callback=self.parse, meta={"keyword": key, 're_time': 2}, )
