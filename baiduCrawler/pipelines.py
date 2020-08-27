@@ -208,7 +208,7 @@ class SQL3Pipeline(object):
             if a_hash != item['answer_hash']:
                 sql4 = 'UPDATE {} SET question_text=\"{}\", question_num=\"{}\", answer_name=\"{}\", ' \
                        'answer_time=\"{}\", answer_hash=\"{}\", dianzan_num=\"{}\", spi_date=\"{}\" , comment_num=\"{}\"' \
-                       'WHERE question_num=\"{}\" AND keyword=\"{}\"'.format(item.collection,
+                       'WHERE answer_url=\"{}\" AND keyword=\"{}\"'.format(item.collection,
                                                                              item['question_text'],
                                                                              item['question_num'],
                                                                              item['answer_name'],
@@ -217,7 +217,7 @@ class SQL3Pipeline(object):
                                                                              item['dianzan_num'],
                                                                              item['spi_date'],
                                                                              item['comment_num'],
-                                                                             item['question_num'],
+                                                                             item['answer_url'],
                                                                              item['keyword'])
                 self.cu.execute(sql4)
                 self.con.commit()

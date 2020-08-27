@@ -402,12 +402,7 @@ class Demo(QWidget):
         self.ad.resize(30, 15)
         self.dl.resize(30, 15)
         self.rn.resize(30, 15)
-        self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-        self.table.resizeColumnsToContents()
-        self.table.resizeRowsToContents()
-        self.table2.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-        self.table3.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-        self.table4.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
         self.h_layout.addWidget(self.TB)
         self.h_layout2.addWidget(self.label2)
         self.h_layout2.addWidget(self.inpt)
@@ -581,6 +576,13 @@ class Demo(QWidget):
 
         self.table4.setModel(self.model4)
         # QApplication.processEvents()
+
+        self.table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        # self.table.resizeColumnsToContents()
+        # self.table.resizeRowsToContents()
+        self.table2.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.table3.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.table4.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
     def checkbox_init(self):
         # self.checkbox1.setChecked(False)  # 1

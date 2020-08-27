@@ -4003,3 +4003,149 @@
 2020/08/17 14:02:43 zhihuLogger tmp.py 【question number】:275655239, 【page】:134, finish!
 2020/08/17 14:02:55 zhihuLogger tmp.py 【question number】:275655239, 【page】:135, finish!
 2020/08/17 14:03:08 zhihuLogger tmp.py 【question number】:275655239, 【page】:136, finish!
+2020/08/17 15:19:01 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-17----------------------------------------
+2020/08/17 15:19:02 zhihuLogger tmp.py 【文本情感分析】【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/17 15:19:02 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.zhihu.com/question/20631050, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/17 15:19:11 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://zhuanlan.zhihu.com/p/48872013, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/17 15:19:11 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://msd.misuland.com/pd/4146263433584579782, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/17 15:19:11 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.jianshu.com/p/58bfd9e53db0, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/17 15:19:11 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://blog.csdn.net/alip39/article/details/95891321, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/17 15:19:12 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.jylw.com/37/wz3822387.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/17 15:19:12 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.doc88.com/p-1052508562601.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/17 15:19:12 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://xueshu.baidu.com/s?wd=paperuri:(1e4b0tv0ad2002v07c4n0270yx660991)&filter=sc_long_sign&sc_ks_para=q%3D%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%E7%A0%94%E7%A9%B6&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_us=17333085688403828538, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/17 15:19:12 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://wenku.baidu.com/view/5b0998c42379168884868762caaedd3382c4b5ff.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/17 15:19:12 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.docin.com/p-2418713197.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/17 15:19:25 zhihuLogger tmp.py 【question number】:20631050, 【page】:1, finish!
+2020/08/17 15:19:37 zhihuLogger tmp.py 【question number】:20631050, 【page】:2, finish!
+2020/08/26 20:37:51 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 20:37:52 zhihuLogger tmp.py 【文本情感分析】【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:37:52 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.zhihu.com/question/20631050, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:40:09 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 20:40:09 zhihuLogger tmp.py 【文本情感分析】【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:40:09 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.zhihu.com/question/20631050, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:50:50 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 20:50:50 zhihuLogger tmp.py 【文本情感分析】【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:50:50 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.zhihu.com/question/20631050, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:51:00 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://zhuanlan.zhihu.com/p/48872013, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:51:00 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.jianshu.com/p/58bfd9e53db0, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:51:00 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.jylw.com/37/wz3822387.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:51:00 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://blog.csdn.net/IAlexanderI/article/details/89045799, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:51:00 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.doc88.com/p-1052508562601.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:51:00 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://wenku.baidu.com/view/5b0998c42379168884868762caaedd3382c4b5ff.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:51:00 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://xueshu.baidu.com/s?wd=paperuri:(1e4b0tv0ad2002v07c4n0270yx660991)&filter=sc_long_sign&sc_ks_para=q%3D%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%E7%A0%94%E7%A9%B6&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_us=17333085688403828538, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:51:00 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.docin.com/p-2418713197.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:51:00 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://weibo.com/1402400261/Eno3U3pwM, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:51:13 zhihuLogger tmp.py 【question number】:20631050, 【page】:1, finish!
+2020/08/26 20:51:24 zhihuLogger tmp.py 【question number】:20631050, 【page】:2, finish!
+2020/08/26 20:53:02 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 20:53:03 zhihuLogger tmp.py 【文本情感分析】【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:03 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.zhihu.com/question/20631050, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:03 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://zhuanlan.zhihu.com/p/48872013, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:03 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.jianshu.com/p/58bfd9e53db0, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:03 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.jylw.com/37/wz3822387.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:03 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://blog.csdn.net/IAlexanderI/article/details/89045799, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:03 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.doc88.com/p-1052508562601.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:03 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://wenku.baidu.com/view/5b0998c42379168884868762caaedd3382c4b5ff.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:03 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://xueshu.baidu.com/s?wd=paperuri:(1e4b0tv0ad2002v07c4n0270yx660991)&filter=sc_long_sign&sc_ks_para=q%3D%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%E7%A0%94%E7%A9%B6&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_us=17333085688403828538, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:03 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.docin.com/p-2418713197.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:03 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://weibo.com/1402400261/Eno3U3pwM, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:57 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 20:53:58 zhihuLogger tmp.py 【文本情感分析】【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:53:58 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.zhihu.com/question/20631050, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:55:46 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 20:55:46 zhihuLogger tmp.py 【文本情感分析】【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:55:46 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.zhihu.com/question/20631050, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:55:54 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://zhuanlan.zhihu.com/p/48872013, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:55:54 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://my.oschina.net/u/4392850/blog/3209230/print, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:55:54 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.jianshu.com/p/58bfd9e53db0, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:55:54 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://blog.csdn.net/IAlexanderI/article/details/89045799, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:55:54 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.jylw.com/37/wz3822387.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:55:54 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.doc88.com/p-1052508562601.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:55:54 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://wenku.baidu.com/view/5b0998c42379168884868762caaedd3382c4b5ff.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:55:54 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://xueshu.baidu.com/s?wd=paperuri:(1e4b0tv0ad2002v07c4n0270yx660991)&filter=sc_long_sign&sc_ks_para=q%3D%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%E7%A0%94%E7%A9%B6&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_us=17333085688403828538, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:55:54 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.docin.com/p-2418713197.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:56:08 zhihuLogger tmp.py 【question number】:20631050, 【page】:1, finish!
+2020/08/26 20:56:19 zhihuLogger tmp.py 【question number】:20631050, 【page】:2, finish!
+2020/08/26 20:56:58 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 20:56:59 zhihuLogger tmp.py 【宿舍】【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:56:59 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/topic/19646208, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:56:59 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/263917513, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:19 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://zhuanlan.zhihu.com/p/48872013, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:19 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://my.oschina.net/u/4392850/blog/3209230/print, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:20 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.jianshu.com/p/58bfd9e53db0, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:20 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://blog.csdn.net/IAlexanderI/article/details/89045799, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:20 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.jylw.com/37/wz3822387.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:20 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.doc88.com/p-1052508562601.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:20 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://wenku.baidu.com/view/5b0998c42379168884868762caaedd3382c4b5ff.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:20 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://xueshu.baidu.com/s?wd=paperuri:(1e4b0tv0ad2002v07c4n0270yx660991)&filter=sc_long_sign&sc_ks_para=q%3D%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%E7%A0%94%E7%A9%B6&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_us=17333085688403828538, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:20 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.docin.com/p-2418713197.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:36 zhihuLogger tmp.py 【question number】:20631050, 【page】:1, finish!
+2020/08/26 20:58:46 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 20:58:46 zhihuLogger tmp.py 【宿舍】【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:46 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/topic/19646208, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:47 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/topic/19804534, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:58:47 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/25501230, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:59:56 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 20:59:56 zhihuLogger tmp.py 【文本情感分析】【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:59:56 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.zhihu.com/question/20631050, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 20:59:56 zhihuLogger tmp.py 断点，问题20631050从第2页开始请求
+2020/08/26 21:02:27 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://zhuanlan.zhihu.com/p/48872013, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:27 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://my.oschina.net/u/4392850/blog/3209230/print, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:27 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.jianshu.com/p/58bfd9e53db0, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:27 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://blog.csdn.net/IAlexanderI/article/details/89045799, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:27 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.jylw.com/37/wz3822387.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:27 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.doc88.com/p-1052508562601.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:27 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://wenku.baidu.com/view/5b0998c42379168884868762caaedd3382c4b5ff.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:27 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://xueshu.baidu.com/s?wd=paperuri:(1e4b0tv0ad2002v07c4n0270yx660991)&filter=sc_long_sign&sc_ks_para=q%3D%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%E7%A0%94%E7%A9%B6&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_us=17333085688403828538, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:27 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.docin.com/p-2418713197.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:31 zhihuLogger tmp.py 【question number】:20631050, 【page】:2, finish!
+2020/08/26 21:02:41 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 21:02:41 zhihuLogger tmp.py 【文本情感分析】【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:41 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.zhihu.com/question/20631050, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:41 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://zhuanlan.zhihu.com/p/48872013, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:41 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://my.oschina.net/u/4392850/blog/3209230/print, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:41 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://www.jianshu.com/p/58bfd9e53db0, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:41 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://blog.csdn.net/IAlexanderI/article/details/89045799, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:42 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.jylw.com/37/wz3822387.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:42 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.doc88.com/p-1052508562601.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:42 zhihuLogger tmp.py 【文本情感分析】【sub url】:https://wenku.baidu.com/view/5b0998c42379168884868762caaedd3382c4b5ff.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:42 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://xueshu.baidu.com/s?wd=paperuri:(1e4b0tv0ad2002v07c4n0270yx660991)&filter=sc_long_sign&sc_ks_para=q%3D%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8%E7%A0%94%E7%A9%B6&tn=SE_baiduxueshu_c1gjeupa&ie=utf-8&sc_us=17333085688403828538, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:42 zhihuLogger tmp.py 【文本情感分析】【sub url】:http://www.docin.com/p-2418713197.html, 【start url】:https://www.baidu.com/s?wd=%E6%96%87%E6%9C%AC%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:54 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 21:02:54 zhihuLogger tmp.py 【宿舍】【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:54 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/topic/19646208, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:54 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/topic/19804534, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:02:54 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/25501230, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:05:29 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 21:05:30 zhihuLogger tmp.py 【宿舍】【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:05:30 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/topic/19646208, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:05:30 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/topic/19804534, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:05:30 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/35958523, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:05:38 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/25501230, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:06:06 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/19692122/answer/121085013, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:06:17 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/20034722, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:06:28 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/22421488, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:06:42 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/22127802, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:06:53 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 21:06:54 zhihuLogger tmp.py 【宿舍】【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:06:54 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/topic/19646208, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:06:54 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/topic/19804534, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:06:54 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/35958523, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:07:02 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/25501230, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:07:23 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/19692122/answer/121085013, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:07:37 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/20034722, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:07:48 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/22421488, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:08:02 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/22127802, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:08:14 zhihuLogger tmp.py 【宿舍】【sub url】:https://www.zhihu.com/question/263917513?sort=created, 【start url】:https://www.baidu.com/s?wd=%E5%AE%BF%E8%88%8D%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:09:03 zhihuLogger tmp.py ---------------------------------zhihu Spider started 2020-08-26----------------------------------------
+2020/08/26 21:09:04 zhihuLogger tmp.py 【电力】【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:09:04 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/topic/19565142/index, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:09:04 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/20245081, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:09:12 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/topic/19600175, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:09:12 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/topic/19769482, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:09:12 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/topic/19870413/hot, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:09:12 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/60901074/answer/182410653, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:09:57 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/20676144, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:10:08 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/topic/19728206, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:10:08 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/34080123, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
+2020/08/26 21:10:20 zhihuLogger tmp.py 【电力】【sub url】:https://www.zhihu.com/question/62509143/answer/199264380, 【start url】:https://www.baidu.com/s?wd=%E7%94%B5%E5%8A%9B%20%E7%9F%A5%E4%B9%8E&pn=0
