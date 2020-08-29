@@ -6,7 +6,7 @@ from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtSql import QSqlDatabase, QSqlTableModel, QSqlQueryModel, QSqlQuery
 from PyQt5.QtWidgets import QApplication, QMessageBox, QTableView, QWidget, QLabel, QVBoxLayout, QHBoxLayout, \
     QHeaderView, QLineEdit, QPushButton, QCheckBox, QGridLayout, QComboBox, QTabWidget, QSpinBox, QSplitter, QDialog,\
-    QDialogButtonBox, QSplashScreen
+    QDialogButtonBox, QSplashScreen, QTextEdit, QTextBrowser, QWidget, QMainWindow
 from PyQt5.QtCore import QThread, pyqtSignal, QFile, QTextStream
 from baiduCrawler.spiders.tmp import TmpSpider
 from baiduCrawler.spiders.baijiahao import  BaijiahaoSpider
@@ -26,7 +26,7 @@ import scrapy.statscollectors
 import scrapy.logformatter
 import scrapy.dupefilters
 import scrapy.squeues
-
+import jieba
 import scrapy.extensions.spiderstate
 import scrapy.extensions.corestats
 import scrapy.extensions.telnet
@@ -61,13 +61,14 @@ import scrapy.downloadermiddlewares.httpcompression
 import scrapy.downloadermiddlewares.redirect
 import scrapy.downloadermiddlewares.retry
 import scrapy.downloadermiddlewares.robotstxt
-
+import jieba.posseg as pseg
+from gensim import corpora, models
 import scrapy.spidermiddlewares.depth
 import scrapy.spidermiddlewares.httperror
 import scrapy.spidermiddlewares.offsite
 import scrapy.spidermiddlewares.referer
 import scrapy.spidermiddlewares.urllength
-
+from textProcess.process import textPro
 import scrapy.pipelines
 
 import scrapy.core.downloader.handlers.http
@@ -271,19 +272,163 @@ class Dialog(QDialog):
 
         self.config.write(open(self.ini_file_path, "w"))
 
-class Demo(QWidget):
+
+class showFullText(QDialog):
+    saveSignal = pyqtSignal(int, int, int, str)
+    def __init__(self, parent=None):
+        super(showFullText, self).__init__(parent)
+        self.processer = textPro()
+
+
+    def layout_init2(self):
+        self.h_layout2 = QHBoxLayout()
+        self.v_layout2 = QVBoxLayout()
+        self.save_button = QPushButton('保存', self)
+        self.close_button = QPushButton('取消', self)
+        self.h_layout2.addWidget(self.save_button)
+        self.h_layout2.addWidget(self.close_button)
+        self.v_layout2.addWidget(self.title_label)
+        self.v_layout2.addWidget(self.text_edit)
+        self.v_layout2.addLayout(self.h_layout2)
+        self.setLayout(self.v_layout2)
+
+    def layout_init1(self):
+        # self.setWhatsThis('this is')
+        self.text_browser = QTextBrowser(self)
+        self.h_layout0 = QHBoxLayout()
+        self.h_layout1 = QHBoxLayout()
+        self.v_layout1 = QVBoxLayout()
+        self.h_layout3 = QHBoxLayout()
+        self.grid_layout = QGridLayout()
+        self.POS_button = QPushButton('词性标注', self)
+        self.wordsplit_button = QPushButton('分词', self)
+        self.save_button = QPushButton('保存', self)
+        self.close_button = QPushButton('取消', self)
+        self.h_layout1.addWidget(self.save_button)
+        self.h_layout1.addWidget(self.wordsplit_button)
+        self.h_layout1.addWidget(self.POS_button)
+        self.h_layout1.addWidget(self.close_button)
+        self.h_layout0.addWidget(self.title_label)
+        right_widget = QWidget()  # 创建一个右侧部件
+        self.right_widget_layout = QGridLayout()  # 创建一个网格布局
+        right_widget.setLayout(self.right_widget_layout)  # 设置右侧部件的布局为网格布局
+        self.h_layout0.addWidget(right_widget)
+        self.h_layout3.addWidget(self.text_edit)
+        self.h_layout3.addWidget(self.text_browser)
+        self.v_layout1.addLayout(self.h_layout0)
+        self.v_layout1.addLayout(self.h_layout3)
+        self.v_layout1.addLayout(self.h_layout1)
+        self.setLayout(self.v_layout1)
+
+
+
+
+
+    def showText(self, current_page_index, current_col, current_row, current_data):
+        self.data = current_data
+        self.current_page_index = current_page_index
+        self.current_col = current_col
+        self.current_row = current_row
+        self.text_edit = QTextEdit(self)
+        self.text_edit.textChanged.connect(self.set_text_func)
+        self.text_edit.setText(current_data)
+        self.setWindowTitle('显示全文')
+        self.title_label = QLabel('正文:', self)
+        if current_page_index == 0:
+            col_title = ['关键词', '问题url', '问题', '问题ID', '回答者', '回答url', '回答时间', '回答正文', '点赞数', '评论数', '', '爬取时间']
+            col_change = [2, 7]
+            self.title_label.setText(col_title[current_col]+'：')
+            if current_col in col_change:
+                self.layout_init1()
+            else:
+                self.layout_init2()
+        elif current_page_index == 1:
+            col_title = ['关键词', '问题url', '问题', '问题ID', '问题关注量', '问题浏览量', '回答数量', '', '爬取时间']
+            col_change = [2]
+            self.title_label.setText(col_title[current_col]+'：')
+            if current_col in col_change:
+                self.layout_init1()
+            else:
+                self.layout_init2()
+        elif current_page_index == 2:
+            col_title = ['关键词', '文章url', '文章标题', '作者姓名', '发表时间', '来源', '正文', '爬取时间']
+            col_change = [2, 6]
+            self.title_label.setText(col_title[current_col]+'：')
+            if current_col in col_change:
+                self.layout_init1()
+            else:
+                self.layout_init2()
+        elif current_page_index == 3:
+            col_title = ['关键词', '问题url', '文章标题', '来源', '发表时间', '正文', '爬取时间']
+            col_change = [2, 5]
+            self.title_label.setText(col_title[current_col]+'：')
+            if current_col in col_change:
+                self.layout_init1()
+            else:
+                self.layout_init2()
+
+        self.button_init()
+
+    def set_text_func(self):
+        self.data = self.text_edit.toPlainText()
+
+    def button_init(self):
+        self.close_button.clicked.connect(self.close)
+        self.save_button.clicked.connect(self.save_data)
+        try:
+            self.wordsplit_button.clicked.connect(self.wdsplit)
+            self.POS_button.clicked.connect(self.POS)
+        except:
+            pass
+
+    def save_data(self):
+        self.saveSignal.emit(self.current_page_index, self.current_col, self.current_row, self.data)
+
+    def wdsplit(self):
+        while self.right_widget_layout.count():
+            child = self.right_widget_layout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
+        result = self.processer.word_split(self.data)
+        result = "\n\n ".join(result)
+        self.text_browser.setText(result)
+
+    def POS(self):
+        # 遍历右侧布局中的子部件，将其删除
+        while self.right_widget_layout.count():
+            child = self.right_widget_layout.takeAt(0)
+            if child.widget():
+                child.widget().deleteLater()
+        self.btn = QPushButton('词性标注对照表', self)
+        # self.btn.setFixedSize(150, 100)
+        self.right_widget_layout.addWidget(self.btn)  # 将文本部件添加到右侧布局中。
+        self.btn.clicked.connect(self.showPic)
+        result = self.processer.POS(self.data)
+        result = "\n\n".join(result)
+        self.text_browser.setText(result)
+
+    def showPic(self):
+        self.pic_widget = QDialog(self)
+        lab1 = QLabel(self)
+        lab1.setPixmap(QPixmap("./POS.png"))
+        vbox = QVBoxLayout()
+        vbox.addWidget(lab1)
+        self.pic_widget.setLayout(vbox)
+        self.pic_widget.setWindowTitle("词性标注对照表")
+        self.pic_widget.show()
+
+class DemoWidget(QWidget):
+    fullTextSignal = pyqtSignal(int, int, int, str)
     def __init__(self):
-        super(Demo, self).__init__()
-        self.setWindowTitle('数据收集器')
+        super(DemoWidget, self).__init__()
+
         self.db = None
         #self.db_connect()
-        self.resize(1000, 500)
+
         #self.crawl_thread = CrawlThread(self)
         self.TB = QTabWidget(self)
         self.table_init()
         self.setWindowIcon(QIcon(res_path('icon2.ico')))
-
-
 
         #self.table3 = QTableView(self)
         #self.TB.currentChanged.connect(lambda: print(self.TB.currentIndex()))
@@ -380,8 +525,59 @@ class Demo(QWidget):
         self.model3 = QSqlTableModel()  # 1
         self.model4 = QSqlTableModel()  # 1
 
+
+    def table_double_clicked(self, table, index):
+        table_column = index.column()
+        table_row = index.row()
+        current_item = table.model().index(table_row, table_column).data()
+        current_table_index = self.TB.currentIndex()
+        self.showFullText = showFullText(self)
+        self.showFullText.setMinimumSize(700, 450)
+        self.fullTextSignal.connect(self.showFullText.showText)
+        self.fullTextSignal.emit(current_table_index, table_column, table_row, str(current_item))
+        self.showFullText.saveSignal.connect(self.saveData)
+        self.showFullText.show()
+        self.fullTextSignal.disconnect(self.showFullText.showText)
+        #print(table_column)
+
+    def saveData(self, current_table_index, table_column, table_row, data):
+        if current_table_index == 0:
+            model = self.model
+            tb = self.table
+            int_list = [3, 8, 9]
+            if table_column in int_list:
+                data = int(data)
+        elif current_table_index == 1:
+            model = self.model2
+            tb = self.table2
+            int_list = [3, 4, 5, 6]
+            if table_column in int_list:
+                data = int(data)
+        elif current_table_index == 2:
+            tb = self.table3
+            model = self.model3
+        else:
+            tb = self.table4
+            model = self.model4
+        model.setData(model.index(table_row, table_column), data)
+        print(model.submitAll(), table_row, table_column, data)
+        QMessageBox.information(self, '提示', '保存成功！')
+        self.showFullText.close()
+
+        model.select()
+        tb.setModel(model)
+        # self.showFullText.saveSignal.disconnect(self.saveData)
+
+
+
     def tb_reset(self, TB, table1, table2, table3, table4):
         TB.clear()
+        table1.doubleClicked.connect(lambda: self.table_double_clicked(table1, table1.currentIndex()))
+        table1.hideColumn(10)
+        table2.doubleClicked.connect(lambda: self.table_double_clicked(table2, table2.currentIndex()))
+        table2.hideColumn(7)
+        table3.doubleClicked.connect(lambda: self.table_double_clicked(table3, table3.currentIndex()))
+        table4.doubleClicked.connect(lambda: self.table_double_clicked(table4, table4.currentIndex()))
         TB.addTab(table1, '知乎回答')
         TB.addTab(table2, '知乎问题')
         TB.addTab(table3, '百度百家号')
@@ -440,6 +636,7 @@ class Demo(QWidget):
 
     def dialog_init(self):
         self.login = Dialog(self)
+        self.login.setWindowModality(Qt.ApplicationModal)
         self.login.show()
         self.login.activateWindow()
         self.login.dialogSignel.connect(self.input_info)
@@ -714,6 +911,23 @@ def res_path(relative_path):
 
     return os.path.join(base_path, relative_path)
 
+class LDAWidget(QWidget):
+    def __init__(self):
+        super(LDAWidget, self).__init__()
+
+
+class Demo(QMainWindow):
+    def __init__(self):
+        super(Demo, self).__init__()
+        self.setWindowTitle('数据收集器')
+        self.TB = QTabWidget(self)
+        self.spiderWidget = DemoWidget()
+        self.TB.addTab(self.spiderWidget, '数据收集')
+        self.ldaWidget = LDAWidget()
+        self.TB.addTab(self.ldaWidget, '检索与主题分析')
+        self.setCentralWidget(self.TB)
+        self.resize(1000, 500)
+        self.setWindowIcon(QIcon(res_path('icon2.ico')))
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
