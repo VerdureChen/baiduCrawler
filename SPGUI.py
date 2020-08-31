@@ -6,12 +6,12 @@ from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtSql import QSqlDatabase, QSqlTableModel, QSqlQueryModel, QSqlQuery
 from PyQt5.QtWidgets import QApplication, QMessageBox, QTableView, QWidget, QLabel, QVBoxLayout, QHBoxLayout, \
     QHeaderView, QLineEdit, QPushButton, QCheckBox, QGridLayout, QComboBox, QTabWidget, QSpinBox, QSplitter, QDialog,\
-    QDialogButtonBox, QSplashScreen, QTextEdit, QTextBrowser, QWidget, QMainWindow
+    QDialogButtonBox, QSplashScreen, QTextEdit, QTextBrowser, QWidget, QMainWindow, QFormLayout
 from PyQt5.QtCore import QThread, pyqtSignal, QFile, QTextStream
 from baiduCrawler.spiders.tmp import TmpSpider
 from baiduCrawler.spiders.baijiahao import  BaijiahaoSpider
 from baiduCrawler.spiders.sinanews import SinanewsSpider
-from multiprocessing import Process, Manager, JoinableQueue
+from multiprocessing import Process, Manager, JoinableQueue, Pipe
 import ctypes
 import scrapy
 from scrapy.utils.project import get_project_settings
@@ -177,7 +177,7 @@ class Dialog(QDialog):
         super(Dialog, self).__init__(parent)
         #self.login = QWidget(self)
 
-
+        self.setWindowIcon(QIcon(res_path('icon2.ico')))
         self.grid_layout = QGridLayout()
         self.h_layout = QHBoxLayout()
         self.v_layout = QVBoxLayout()
@@ -271,7 +271,6 @@ class Dialog(QDialog):
             self.config.set("user_info", "password", '')
 
         self.config.write(open(self.ini_file_path, "w"))
-
 
 class showFullText(QDialog):
     saveSignal = pyqtSignal(int, int, int, str)
@@ -422,12 +421,12 @@ class DemoWidget(QWidget):
     def __init__(self):
         super(DemoWidget, self).__init__()
 
-        self.db = None
+
         #self.db_connect()
 
         #self.crawl_thread = CrawlThread(self)
         self.TB = QTabWidget(self)
-        self.table_init()
+        # self.table_init()
         self.setWindowIcon(QIcon(res_path('icon2.ico')))
 
         #self.table3 = QTableView(self)
@@ -456,10 +455,7 @@ class DemoWidget(QWidget):
         self.sets = QPushButton("设置", self)
         self.set_buttton_disabled()
         #self.sql_exec()
-        self.TB.addTab(self.table, '知乎回答')
-        self.TB.addTab(self.table2, '知乎问题')
-        self.TB.addTab(self.table3, '百度百家号')
-        self.TB.addTab(self.table4, '新浪新闻')
+
         self.splitter1 = QSplitter(Qt.Vertical)
         self.log_thread = LogThread(self)
         # self.Q = Manager().Queue()
@@ -474,7 +470,7 @@ class DemoWidget(QWidget):
         self.h_ad_dl = QHBoxLayout()
         self.v_layout = QVBoxLayout()
         self.v_layout2 = QVBoxLayout()
-        self.layout_init()
+
         #self.checkbox_init()
         self.button_init()
         #self.database_init()
@@ -510,21 +506,6 @@ class DemoWidget(QWidget):
             self.con.commit()
         self.con.close()
 
-    def table_init(self):
-
-        self.table = QTableView(self)
-        self.table.setSortingEnabled(True)
-        self.table2 = QTableView(self)
-        self.table3 = QTableView(self)
-        self.table4 = QTableView(self)
-        self.table2.setSortingEnabled(True)
-        self.table3.setSortingEnabled(True)
-        self.table4.setSortingEnabled(True)
-        self.model = QSqlTableModel()  # 1
-        self.model2 = QSqlTableModel()  # 1
-        self.model3 = QSqlTableModel()  # 1
-        self.model4 = QSqlTableModel()  # 1
-
 
     def table_double_clicked(self, table, index):
         table_column = index.column()
@@ -539,6 +520,7 @@ class DemoWidget(QWidget):
         self.showFullText.show()
         self.fullTextSignal.disconnect(self.showFullText.showText)
         #print(table_column)
+
 
     def saveData(self, current_table_index, table_column, table_row, data):
         if current_table_index == 0:
@@ -569,7 +551,6 @@ class DemoWidget(QWidget):
         # self.showFullText.saveSignal.disconnect(self.saveData)
 
 
-
     def tb_reset(self, TB, table1, table2, table3, table4):
         TB.clear()
         table1.doubleClicked.connect(lambda: self.table_double_clicked(table1, table1.currentIndex()))
@@ -584,14 +565,7 @@ class DemoWidget(QWidget):
         TB.addTab(table4, '新浪新闻')
         TB.show()
 
-    @pyqtSlot(int, str, str, str, str)
-    def input_info(self, count, hostname, dbname, username, pwd):
-        self.hostname = hostname
-        self.dbname = dbname
-        self.username = username
-        self.pwd = pwd
-        self.db_connect(count, hostname, dbname, username, pwd)
-        self.login.login_button.clicked.disconnect(self.login.check)
+
 
     def layout_init(self):
         self.st.resize(30, 15)
@@ -632,14 +606,9 @@ class DemoWidget(QWidget):
         self.v_layout.addLayout(self.h_layout3)
         self.v_layout.addWidget(self.st)
         self.setLayout(self.v_layout)
-        self.dialog_init()
+        # self.dialog_init()
 
-    def dialog_init(self):
-        self.login = Dialog(self)
-        self.login.setWindowModality(Qt.ApplicationModal)
-        self.login.show()
-        self.login.activateWindow()
-        self.login.dialogSignel.connect(self.input_info)
+
 
 
     def set_buttton_disabled(self):
@@ -648,46 +617,7 @@ class DemoWidget(QWidget):
         self.dl.setDisabled(True)
         self.rn.setDisabled(True)
 
-    def db_connect(self, count, hostname, dbname, username, pwd):
-        self.database_init()
-        if self.db is not None:
-            self.table_z1 = QTableView(self)
-            self.table_z2 = QTableView(self)
-            self.table_z3 = QTableView(self)
-            self.table_z4 = QTableView(self)
-            self.tb_reset(self.TB, self.table_z1, self.table_z2, self.table_z3, self.table_z4)
-            self.set_buttton_disabled()
-        #
 
-
-        if self.db is not None and self.db.contains('qt_sql_default_connection'):
-            self.db = QSqlDatabase.database('qt_sql_default_connection')
-        else:
-            self.db = QSqlDatabase.addDatabase('QMYSQL')
-
-        self.db.setHostName(hostname)
-        self.db.setDatabaseName(dbname)
-        self.db.setUserName(username)
-        self.db.setPassword(pwd)
-
-        # query = QSqlQuery()
-        # query.exec_("CREATE DATABASE IF NOT EXISTS {}".format(self.dbname))
-
-        if not self.db.open():
-            QMessageBox.critical(self, 'Database Connection', self.db.lastError().text())
-            self.login.login_button.clicked.connect(self.login.check)
-        else:
-            print(count)
-            QMessageBox.information(self, '提示', '连接成功！')
-            self.TB.close()
-            self.table_init()
-            self.sql_exec()
-            self.tb_reset(self.TB, self.table, self.table2, self.table3, self.table4)
-            self.login.close()
-            self.st.setEnabled(True)
-            self.rn.setEnabled(True)
-            self.ad.setEnabled(True)
-            self.dl.setEnabled(True)
 
     def closeEvent(self, QCloseEvent):
         if self.db is not None:
@@ -700,7 +630,7 @@ class DemoWidget(QWidget):
         self.model.setEditStrategy(QSqlTableModel.OnFieldChange)
         # model = QSqlQueryModel()
         # model.setQuery("SELECT * FROM zhihu")
-        self.model.setHeaderData(0, Qt.Horizontal, '关键词')
+        self.model.setHeaderData(0, Qt.Horizontal, '检索词')
         self.model.setHeaderData(1, Qt.Horizontal, '问题url')
         self.model.setHeaderData(2, Qt.Horizontal, '问题')
         self.model.setHeaderData(3, Qt.Horizontal, '问题ID')
@@ -722,7 +652,7 @@ class DemoWidget(QWidget):
         self.model2.setEditStrategy(QSqlTableModel.OnFieldChange)
         # model2 = QSqlQueryModel()
         # model2.setQuery("SELECT * FROM zhihuQuestion")
-        self.model2.setHeaderData(0, Qt.Horizontal, '关键词')
+        self.model2.setHeaderData(0, Qt.Horizontal, '检索词')
         self.model2.setHeaderData(1, Qt.Horizontal, '问题url')
         self.model2.setHeaderData(2, Qt.Horizontal, '问题')
         self.model2.setHeaderData(3, Qt.Horizontal, '问题ID')
@@ -741,7 +671,7 @@ class DemoWidget(QWidget):
         self.model3.setEditStrategy(QSqlTableModel.OnFieldChange)
         # model3 = QSqlQueryModel()
         # model3.setQuery("SELECT * FROM baijiahao")
-        self.model3.setHeaderData(0, Qt.Horizontal, '关键词')
+        self.model3.setHeaderData(0, Qt.Horizontal, '检索词')
         self.model3.setHeaderData(1, Qt.Horizontal, '文章url')
         self.model3.setHeaderData(2, Qt.Horizontal, '文章标题')
         self.model3.setHeaderData(3, Qt.Horizontal, '作者姓名')
@@ -760,7 +690,7 @@ class DemoWidget(QWidget):
         self.model4.setTable('sinanews')
         # model4.setQuery("SELECT * FROM sinanews")
         self.model4.setEditStrategy(QSqlTableModel.OnFieldChange)
-        self.model4.setHeaderData(0, Qt.Horizontal, '关键词')
+        self.model4.setHeaderData(0, Qt.Horizontal, '检索词')
         self.model4.setHeaderData(1, Qt.Horizontal, '文章url')
         self.model4.setHeaderData(2, Qt.Horizontal, '文章标题')
         self.model4.setHeaderData(3, Qt.Horizontal, '来源')
@@ -795,7 +725,7 @@ class DemoWidget(QWidget):
         self.ad.clicked.connect(self.add_line)
         self.dl.clicked.connect(self.del_line)
         self.rn.clicked.connect(self.refresh_line)
-        self.sets.clicked.connect(self.dialog_init)
+
 
     def refresh_line(self):
         if self.TB.currentIndex() == 0:
@@ -911,23 +841,499 @@ def res_path(relative_path):
 
     return os.path.join(base_path, relative_path)
 
+class LDAThread(QThread):
+    running_signal =pyqtSignal(str)
+    finish_signal = pyqtSignal(list, list)
+    def __init__(self):
+        super(LDAThread, self).__init__()
+        manager = Manager()
+        self.return_dict = manager.dict()
+        self.count = 0
+
+    def save_data(self, text_list, lda_topic_num, lda_turns_num):
+        self.text_list = text_list
+        self.lda_topic_num = lda_topic_num
+        self.lda_turns_num = lda_turns_num
+
+    def run(self):
+        self.p = Process(target=textPro.LDA, args=(self.text_list, self.lda_topic_num, self.lda_turns_num, self.return_dict))
+        self.p.start()
+        while self.p.is_alive():
+            s = '正在处理' + self.count % 4 * '.'
+            self.count = self.count + 1
+            self.sleep(1)
+            self.running_signal.emit(s)
+
+        self.finish_signal.emit(self.return_dict.values()[0], self.return_dict.values()[1].tolist())
+
+
+
+class lda_dialog(QDialog):
+    getText_signal = pyqtSignal(int)
+    lda_start_signal = pyqtSignal(list, int, int)
+    def __init__(self, parent=None):
+        super(lda_dialog, self).__init__(parent)
+        self.zhihu_list = ['问题', '回答正文', '问题+回答正文']
+        self.zhiques_list = ['问题']
+        self.bai_list = ['文章标题', '正文', '文章标题+正文']
+        self.sina_list = ['文章标题', '正文', '文章标题+正文']
+
+        self.setMinimumSize(500, 700)
+        self.setWindowTitle('LDA主题分析')
+        self.setWindowModality(Qt.ApplicationModal)
+        self.content_label = QLabel('LDA分析内容：', self)
+        self.topic_num_label = QLabel('LDA预计主题数：', self)
+        self.turns_label = QLabel('LDA训练轮数：', self)
+        self.content_combox = QComboBox(self)
+        self.topic_spinbox = QSpinBox(self)
+        self.topic_spinbox.setRange(1, 100)  # 1
+        self.topic_spinbox.setSingleStep(1)  # 2
+        self.topic_spinbox.setValue(1)
+
+        self.turns_spinbox = QSpinBox(self)
+        self.turns_spinbox.setRange(100, 3000)  # 1
+        self.turns_spinbox.setSingleStep(100)  # 2
+        self.turns_spinbox.setValue(100)
+
+        self.startlda_btn = QPushButton('开始', self)
+        self.quit_btn = QPushButton('取消', self)
+        self.startlda_btn.clicked.connect(self.run_lda)
+        self.quit_btn.clicked.connect(self.close)
+        self.topic_label = QLabel('话题关键词：', self)
+        self.infer_label = QLabel('文档主题推测：', self)
+        self.topic_broswer = QTextBrowser(self)
+        self.infer_broswer = QTextBrowser(self)
+
+        self.ldaThread = LDAThread()
+
+        self.text_list = []
+        self.h_lyt = QHBoxLayout()
+        self.f_lyt = QFormLayout()
+        self.v_lyt = QVBoxLayout()
+        self.lda_dialog_layout_init()
+
+    def lda_process(self, com1, com2):
+        self.com1 = com1
+        self.com2 = com2
+        self.content_combox.clear()
+        if self.com1 == 0:
+            self.content_combox.addItems(self.zhihu_list)
+        elif self.com1 == 1:
+            self.content_combox.addItems(self.zhiques_list)
+        elif self.com1 == 2:
+            self.content_combox.addItems(self.bai_list)
+        else:
+            self.content_combox.addItems(self.sina_list)
+        self.show()
+
+
+    def lda_dialog_layout_init(self):
+
+
+        self.f_lyt.addRow(self.content_label, self.content_combox)
+        self.f_lyt.addRow(self.topic_num_label, self.topic_spinbox)
+        self.f_lyt.addRow(self.turns_label, self.turns_spinbox)
+
+        self.h_lyt.addWidget(self.startlda_btn)
+        self.h_lyt.addWidget(self.quit_btn)
+
+        self.v_lyt.addLayout(self.f_lyt)
+        self.v_lyt.addLayout(self.h_lyt)
+        self.v_lyt.addWidget(self.topic_label)
+        self.v_lyt.addWidget(self.topic_broswer)
+        self.v_lyt.addWidget(self.infer_label)
+        self.v_lyt.addWidget(self.infer_broswer)
+
+        self.setLayout(self.v_lyt)
+
+    def run_lda(self):
+        text_list = []
+        self.startlda_btn.setDisabled(True)
+        table_num = self.com1
+        content_num = self.content_combox.currentIndex()
+        self.getText_signal.emit(content_num)
+        # self.text_list = self.get_lda_text(table_num, content_num)
+        lda_topic_num = self.topic_spinbox.value()
+        lda_turns_num = self.turns_spinbox.value()
+
+        self.lda_start_signal.connect(self.ldaThread.save_data)
+        self.lda_start_signal.emit(self.text_list, lda_topic_num, lda_turns_num)
+        self.lda_start_signal.disconnect(self.ldaThread.save_data)
+        self.ldaThread.running_signal.connect(self.set_running_lda)
+        self.ldaThread.finish_signal.connect(self.finish_lda)
+        self.ldaThread.start()
+
+
+    def set_running_lda(self, txt):
+        self.startlda_btn.setText(txt)
+
+    def finish_lda(self, topics, probs):
+        self.startlda_btn.setText('开始')
+        self.startlda_btn.setEnabled(True)
+        topic_show = []
+        for i, item in enumerate(topics):
+            topic_show.append('话题{}：{}'.format(i + 1, item[1]))
+        self.topic_broswer.setText('\n\n'.join(topic_show))
+        infer_show = []
+        for i, item in enumerate(probs):
+            belong_to = item.index(max(item)) + 1
+            infer_show.append('文档{}：话题{}'.format(i + 1, belong_to))
+        self.infer_broswer.setText('\n'.join(infer_show))
+
+    def closeEvent(self, QCloseEvent):
+        if self.ldaThread.isRunning():
+            self.ldaThread.exit()
+        self.close()
+
+
 class LDAWidget(QWidget):
+    tab_list = ['知乎回答', '知乎问题', '百度百家号', '新浪新闻']
+    tab_name = ['zhihu', 'zhihuQuestion', 'baijiahao', 'sinanews']
+
     def __init__(self):
         super(LDAWidget, self).__init__()
+        self.tab_label = QLabel('检索表格：', self)
+        self.title_label = QLabel('检索字段：', self)
+        self.info_label = QLabel('', self)
+        self.combobox_1 = QComboBox(self)
+        self.combobox_1.setDisabled(True)
+        self.combobox_2 = QComboBox(self)
+        self.combobox_2.setDisabled(True)
+        self.sel_table = QTableView(self)
 
+        self.search_btn = QPushButton('查询', self)
+        self.search_btn.setDisabled(True)
+        self.search_btn.setFixedSize(200, 50)
+
+        self.lda_btn = QPushButton('LDA分析', self)
+        self.lda_btn.setDisabled(True)
+        self.lda_btn.setFixedSize(200, 50)
+        self.lda_btn.hide()
+
+        self.combobox_init()
+        self.f_layout = QFormLayout()
+        self.h_layout = QHBoxLayout()
+        self.v_layout = QVBoxLayout()
+
+        self.btn_init()
+        self.layout_init()
+
+    def btn_init(self):
+        com1 = self.combobox_1.currentIndex()
+        com2 = self.combobox_2.currentIndex()
+
+        self.search_btn.clicked.connect(self.show_data)
+        self.lda_btn.clicked.connect(lambda: self.lda_dlog_init(com1, com2))
+
+    def lda_dlog_init(self, com1, com2):
+        self.lda_dlog = lda_dialog(self)
+        self.lda_dlog.getText_signal.connect(self.get_lda_text)
+        self.lda_dlog.lda_process(com1, com2)
+
+    def show_data(self):
+        self.model1 = QSqlTableModel()
+        self.model1.setTable(self.tab_name[self.combobox_1.currentIndex()])
+        self.sql_exec(self.combobox_1.currentIndex())
+        self.model1.setFilter('keyword=\"{}\"'.format(self.combobox_2.currentText()))
+        print("keyword=\"{}\"".format(self.combobox_2.currentText()))
+        self.sel_table.setModel(self.model1)
+        index_table = self.combobox_1.currentIndex()
+        if index_table == 0:
+            self.sel_table.showColumn(7)
+            self.sel_table.hideColumn(10)
+        elif index_table == 1:
+            self.sel_table.hideColumn(7)
+        else:
+            self.sel_table.showColumn(7)
+        self.model1.select()
+        self.sel_count = self.model1.rowCount()
+        self.info_label.setText('共得到{}条记录。'.format(str(self.sel_count)))
+        self.lda_btn.show()
+        if self.sel_count != 0:
+            self.lda_btn.setEnabled(True)
+
+    def get_lda_text(self, content_num):
+        text_list = []
+        table_num = self.combobox_1.currentIndex()
+        if table_num == 0:
+            if content_num == 0:
+                for i in range(self.model1.rowCount()):
+                    text = self.model1.record(i).value('question_text')
+                    text_list.append(text)
+            elif content_num == 1:
+                for i in range(self.model1.rowCount()):
+                    text = self.model1.record(i).value('answer_text')
+                    text_list.append(text)
+            elif content_num == 2:
+                for i in range(self.model1.rowCount()):
+                    text = self.model1.record(i).value('question_text') + self.model1.record(i).value('answer_text')
+                    text_list.append(text)
+        elif table_num == 1:
+            if content_num == 0:
+                for i in range(self.model1.rowCount()):
+                    text = self.model1.record(i).value('question_text')
+                    text_list.append(text)
+        elif table_num == 2:
+            if content_num == 0:
+                for i in range(self.model1.rowCount()):
+                    text = self.model1.record(i).value('article_title')
+                    text_list.append(text)
+            elif content_num == 1:
+                for i in range(self.model1.rowCount()):
+                    text = self.model1.record(i).value('article_text')
+                    text_list.append(text)
+            elif content_num == 2:
+                for i in range(self.model1.rowCount()):
+                    text = self.model1.record(i).value('article_title') + self.model1.record(i).value('article_text')
+                    text_list.append(text)
+        elif table_num == 3:
+            if content_num == 0:
+                for i in range(self.model1.rowCount()):
+                    text = self.model1.record(i).value('article_title')
+                    text_list.append(text)
+            elif content_num == 1:
+                for i in range(self.model1.rowCount()):
+                    text = self.model1.record(i).value('article_text')
+                    text_list.append(text)
+            elif content_num == 2:
+                for i in range(self.model1.rowCount()):
+                    text = self.model1.record(i).value('article_title') + self.model1.record(i).value('article_text')
+                    text_list.append(text)
+
+        self.lda_dlog.text_list = [t.replace(' ', '') for t in text_list]
+        self.lda_dlog.getText_signal.disconnect(self.get_lda_text)
+
+    def layout_init(self):
+        self.f_layout.addRow(self.tab_label, self.combobox_1)
+        self.f_layout.addRow(self.title_label, self.combobox_2)
+
+        self.h_layout.addWidget(self.info_label)
+        self.h_layout.addWidget(self.lda_btn, alignment=Qt.AlignRight)
+        self.h_layout.addWidget(self.search_btn, alignment=Qt.AlignRight)
+
+        self.v_layout.addLayout(self.f_layout)
+        self.v_layout.addLayout(self.h_layout)
+        self.v_layout.addWidget(self.sel_table)
+        self.setLayout(self.v_layout)
+
+    def combobox_init(self):
+        self.combobox_1.addItems(self.tab_list)
+        self.combobox_1.currentIndexChanged.connect(lambda: self.on_combobox_func(self.combobox_1))
+        self.combobox_2.currentIndexChanged.connect(lambda: self.on_combobox_func(self.combobox_2))
+
+    def on_combobox_func(self, combobox):  # 8
+        if combobox == self.combobox_1:
+            # QMessageBox.information(self, 'ComboBox 1',
+            #                         '{}: {}'.format(combobox.currentIndex(), combobox.currentText()))
+            self.setComChange(combobox, self.combobox_2)
+        else:
+            pass
+        self.lda_btn.setDisabled(True)
+
+    def setComChange(self, combobox_a, combobox_b):
+        model = QSqlQueryModel()  # 1
+        model.setQuery("SELECT keyword FROM {}".format(self.tab_name[combobox_a.currentIndex()]))
+        keyword_list = []
+        for i in range(model.rowCount()):  # 3
+            keyword = model.record(i).value('keyword')
+            keyword_list.append(keyword)
+        combobox_b.clear()
+        combobox_b.addItems(set(keyword_list))
+        combobox_b.setEnabled(True)
+
+    def sql_exec(self, index):
+
+        if index == 0:
+            # self.model.setEditStrategy(QSqlTableModel.OnFieldChange)
+            # model = QSqlQueryModel()
+            # model.setQuery("SELECT * FROM zhihu")
+            # self.sel_table.hideColumn(10)
+            self.model1.setHeaderData(0, Qt.Horizontal, '检索词')
+            self.model1.setHeaderData(1, Qt.Horizontal, '问题url')
+            self.model1.setHeaderData(2, Qt.Horizontal, '问题')
+            self.model1.setHeaderData(3, Qt.Horizontal, '问题ID')
+            self.model1.setHeaderData(4, Qt.Horizontal, '回答者')
+            self.model1.setHeaderData(5, Qt.Horizontal, '回答url')
+            self.model1.setHeaderData(6, Qt.Horizontal, '回答时间')
+            self.model1.setHeaderData(7, Qt.Horizontal, '回答正文')
+            self.model1.setHeaderData(8, Qt.Horizontal, '点赞数')
+            self.model1.setHeaderData(9, Qt.Horizontal, '评论数')
+            self.model1.setHeaderData(10, Qt.Horizontal, 'hash值')
+            self.model1.setHeaderData(11, Qt.Horizontal, '爬取时间')
+            #model.submit()
+
+
+            # self.table.setModel(self.model)
+
+        elif index == 1:
+            # self.model2.setTable('zhihuQuestion')
+            # self.model2.setEditStrategy(QSqlTableModel.OnFieldChange)
+            # model2 = QSqlQueryModel()
+            # model2.setQuery("SELECT * FROM zhihuQuestion")
+            self.model1.setHeaderData(0, Qt.Horizontal, '检索词')
+            self.model1.setHeaderData(1, Qt.Horizontal, '问题url')
+            self.model1.setHeaderData(2, Qt.Horizontal, '问题')
+            self.model1.setHeaderData(3, Qt.Horizontal, '问题ID')
+            self.model1.setHeaderData(4, Qt.Horizontal, '问题关注量')
+            self.model1.setHeaderData(5, Qt.Horizontal, '问题浏览量')
+            self.model1.setHeaderData(6, Qt.Horizontal, '回答数量')
+            self.model1.setHeaderData(7, Qt.Horizontal, 'hash值')
+            self.model1.setHeaderData(8, Qt.Horizontal, '爬取时间')
+            #model2.submit()
+            # self.model1.select()
+            # self.sel_table.hideColumn(7)
+
+            # self.table2.setModel(self.model2)
+
+        elif index == 2:
+            # self.model3.setTable('baijiahao')
+            # self.model3.setEditStrategy(QSqlTableModel.OnFieldChange)
+            # model3 = QSqlQueryModel()
+            # model3.setQuery("SELECT * FROM baijiahao")
+            self.model1.setHeaderData(0, Qt.Horizontal, '检索词')
+            self.model1.setHeaderData(1, Qt.Horizontal, '文章url')
+            self.model1.setHeaderData(2, Qt.Horizontal, '文章标题')
+            self.model1.setHeaderData(3, Qt.Horizontal, '作者姓名')
+            self.model1.setHeaderData(4, Qt.Horizontal, '发表时间')
+            self.model1.setHeaderData(5, Qt.Horizontal, '来源')
+            self.model1.setHeaderData(6, Qt.Horizontal, '正文')
+            self.model1.setHeaderData(7, Qt.Horizontal, '爬取时间')
+            #model3.submit()
+
+            # self.model3.select()
+
+            # self.table3.setModel(self.model3)
+
+        else:
+            # model4 = QSqlQueryModel()  # 1
+
+            # self.model4.setTable('sinanews')
+            # model4.setQuery("SELECT * FROM sinanews")
+            # self.model4.setEditStrategy(QSqlTableModel.OnFieldChange)
+            self.model1.setHeaderData(0, Qt.Horizontal, '检索词')
+            self.model1.setHeaderData(1, Qt.Horizontal, '文章url')
+            self.model1.setHeaderData(2, Qt.Horizontal, '文章标题')
+            self.model1.setHeaderData(3, Qt.Horizontal, '来源')
+            self.model1.setHeaderData(4, Qt.Horizontal, '发表时间')
+            self.model1.setHeaderData(5, Qt.Horizontal, '正文')
+            self.model1.setHeaderData(6, Qt.Horizontal, '爬取时间')
+            #model4.submit()
+
+            # self.model4.select()
+
+            # self.table4.setModel(self.model4)
+            # QApplication.processEvents()
+
+        self.sel_table.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        # self.table.resizeColumnsToContents()
+        # self.table.resizeRowsToContents()
+        # self.table2.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        # self.table3.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        # self.table4.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
 
 class Demo(QMainWindow):
     def __init__(self):
         super(Demo, self).__init__()
-        self.setWindowTitle('数据收集器')
+        self.setWindowTitle('数据收集分析器')
         self.TB = QTabWidget(self)
         self.spiderWidget = DemoWidget()
+        self.table_init()
+        self.spiderWidget.TB.addTab(self.spiderWidget.table, '知乎回答')
+        self.spiderWidget.TB.addTab(self.spiderWidget.table2, '知乎问题')
+        self.spiderWidget.TB.addTab(self.spiderWidget.table3, '百度百家号')
+        self.spiderWidget.TB.addTab(self.spiderWidget.table4, '新浪新闻')
+        self.spiderWidget.layout_init()
+        self.dialog_init()
+        self.spiderWidget.sets.clicked.connect(self.dialog_init)
         self.TB.addTab(self.spiderWidget, '数据收集')
         self.ldaWidget = LDAWidget()
         self.TB.addTab(self.ldaWidget, '检索与主题分析')
         self.setCentralWidget(self.TB)
         self.resize(1000, 500)
         self.setWindowIcon(QIcon(res_path('icon2.ico')))
+        self.db = None
+
+    def dialog_init(self):
+        self.login = Dialog(self.spiderWidget)
+        self.login.setWindowModality(Qt.ApplicationModal)
+        self.login.show()
+        self.login.activateWindow()
+        self.login.dialogSignel.connect(self.input_info)
+
+    @pyqtSlot(int, str, str, str, str)
+    def input_info(self, count, hostname, dbname, username, pwd):
+        self.hostname = hostname
+        self.dbname = dbname
+        self.username = username
+        self.pwd = pwd
+        self.spiderWidget.hostname = hostname
+        self.spiderWidget.dbname = dbname
+        self.spiderWidget.username = username
+        self.spiderWidget.pwd = pwd
+        self.db_connect(count, hostname, dbname, username, pwd)
+        self.ldaWidget.combobox_1.setEnabled(True)
+        self.ldaWidget.search_btn.setEnabled(True)
+        self.ldaWidget.setComChange(self.ldaWidget.combobox_1, self.ldaWidget.combobox_2)
+        self.login.login_button.clicked.disconnect(self.login.check)
+
+    def db_connect(self, count, hostname, dbname, username, pwd):
+        self.spiderWidget.database_init()
+        if self.db is not None:
+            self.spiderWidget.table_z1 = QTableView(self)
+            self.spiderWidget.table_z2 = QTableView(self)
+            self.spiderWidget.table_z3 = QTableView(self)
+            self.spiderWidget.table_z4 = QTableView(self)
+            self.spiderWidget.tb_reset(self.spiderWidget.TB, self.spiderWidget.table_z1, self.spiderWidget.table_z2, self.spiderWidget.table_z3, self.spiderWidget.table_z4)
+            self.spiderWidget.set_buttton_disabled()
+        #
+
+
+        if self.db is not None and self.db.contains('qt_sql_default_connection'):
+            self.db = QSqlDatabase.database('qt_sql_default_connection')
+        else:
+            self.db = QSqlDatabase.addDatabase('QMYSQL')
+
+        self.db.setHostName(hostname)
+        self.db.setDatabaseName(dbname)
+        self.db.setUserName(username)
+        self.db.setPassword(pwd)
+
+        # query = QSqlQuery()
+        # query.exec_("CREATE DATABASE IF NOT EXISTS {}".format(self.dbname))
+
+        if not self.db.open():
+            QMessageBox.critical(self, 'Database Connection', self.db.lastError().text())
+            self.login.login_button.clicked.connect(self.login.check)
+        else:
+            print(count)
+            QMessageBox.information(self, '提示', '连接成功！')
+            self.spiderWidget.TB.close()
+            self.table_init()
+            self.spiderWidget.sql_exec()
+            self.spiderWidget.tb_reset(self.spiderWidget.TB, self.spiderWidget.table, self.spiderWidget.table2, self.spiderWidget.table3, self.spiderWidget.table4)
+            self.login.close()
+            self.spiderWidget.st.setEnabled(True)
+            self.spiderWidget.rn.setEnabled(True)
+            self.spiderWidget.ad.setEnabled(True)
+            self.spiderWidget.dl.setEnabled(True)
+
+    def table_init(self):
+
+        self.spiderWidget.table = QTableView(self)
+        self.spiderWidget.table.setSortingEnabled(True)
+        self.spiderWidget.table2 = QTableView(self)
+        self.spiderWidget.table3 = QTableView(self)
+        self.spiderWidget.table4 = QTableView(self)
+        self.spiderWidget.table2.setSortingEnabled(True)
+        self.spiderWidget.table3.setSortingEnabled(True)
+        self.spiderWidget.table4.setSortingEnabled(True)
+        self.spiderWidget.model = QSqlTableModel()  # 1
+        self.spiderWidget.model2 = QSqlTableModel()  # 1
+        self.spiderWidget.model3 = QSqlTableModel()  # 1
+        self.spiderWidget.model4 = QSqlTableModel()  # 1
+
+    #def db(self):
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

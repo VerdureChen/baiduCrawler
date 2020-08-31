@@ -51,30 +51,35 @@ class textPro:
             stopwords.append(word.strip())
 
         return stopwords
-    def LDA(self, txts):
+    @classmethod
+    def LDA(self, txts, topic, passes_num, return_dict):
         '''
         对传入文本进行LDA提取关键词
         :param txts: [txt1, txt2, txt3...]
         :return:
         '''
-        stopwords = self.getStopwords()
+        stopwords = self.getStopwords(self)
         #print(stopwords)
         word_lists = []
         for text in txts:
-            word_list = [word for word in self.word_split2(text) if word not in stopwords]
+            word_list = [word for word in self.word_split2(self, text) if word not in stopwords]
             word_lists.append(word_list)
         # 构造词典
         dictionary = corpora.Dictionary(word_lists)
         # 基于词典，使【词】→【稀疏向量】，并将向量放入列表，形成【稀疏向量集】
         corpus = [dictionary.doc2bow(words) for words in word_lists]
         # lda模型，num_topics设置主题的个数
-        lda = models.ldamodel.LdaModel(corpus=corpus, id2word=dictionary, num_topics=2, passes=200)
+        lda = models.ldamodel.LdaModel(corpus=corpus, id2word=dictionary, num_topics=topic, passes=passes_num)
         # 打印所有主题，每个主题显示5个词
+        topics = []
         for topic in lda.print_topics(num_words=5):
-            print(topic)
+            topics.append(topic)
         #print(lda.show_topics())
         # 主题推断
-        print(lda.inference(corpus)[0])
+        # print(lda.inference(corpus)[0])
+        return_dict['topics'] = topics
+        return_dict['inference'] = lda.inference(corpus)[0]
+
 
 
 
